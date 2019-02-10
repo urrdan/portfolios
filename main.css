@@ -1,29 +1,37 @@
+/* line 2, main.sass */
 html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
   width: 100%; }
 
+/* line 8, main.sass */
 * {
   margin: 0px; }
 
+/* line 11, main.sass */
 .welcomePage {
   position: static;
   margin: 0px;
   width: 100%;
   height: 100%;
   color: white; }
+  /* line 17, main.sass */
   .welcomePage section {
     float: left;
     padding-top: 20px; }
+    /* line 20, main.sass */
     .welcomePage section span {
       display: block; }
+    /* line 22, main.sass */
     .welcomePage section span:nth-child(1) {
       font-size: 35px;
       font-weight: bold; }
+    /* line 25, main.sass */
     .welcomePage section span:nth-child(2) {
       color: #b4b4b4;
       font-weight: 300; }
+  /* line 28, main.sass */
   .welcomePage #contacts {
     margin: 3vh;
     float: right;
@@ -31,6 +39,7 @@ html, body {
     padding: 10px;
     border-radius: 50%;
     color: brown; }
+  /* line 35, main.sass */
   .welcomePage #menu {
     height: 80%;
     clear: both;
@@ -39,13 +48,16 @@ html, body {
     justify-content: center;
     align-items: center;
     padding-top: 10vh; }
+    /* line 47, main.sass */
     .welcomePage #menu #name {
       color: white;
       margin-bottom: 5%;
       text-align: center;
       font-size: 30px; }
+    /* line 54, main.sass */
     .welcomePage #menu #play {
       font-size: 2vw; }
+    /* line 61, main.sass */
     .welcomePage #menu .play {
       border-bottom: 2px solid pink;
       border-right: 2px solid pink;
@@ -54,30 +66,35 @@ html, body {
       text-align: center;
       width: 10vw;
       height: 4vh; }
+    /* line 70, main.sass */
     .welcomePage #menu ul {
       padding: 0px;
       margin-top: 7%; }
+      /* line 74, main.sass */
       .welcomePage #menu ul li {
-        font-size: 1.5vw;
+        font-size: 4vw;
         border: 2px solid #ffeb3b;
         border-radius: 3px;
         color: #ffeb3b;
         display: inline-block;
         list-style: none;
         margin: 0 1vh;
-        padding: 0 3vh;
+        padding: 0 1vh;
         text-align: centre;
         text-decoration: none; }
+        /* line 86, main.sass */
         .welcomePage #menu ul li:hover {
           background: #ffeb3b;
           color: black; }
+        /* line 89, main.sass */
         .welcomePage #menu ul li a {
           text-decoration: none;
           color: inherit; }
 
+/* line 93, main.sass */
 .welcomePage::before {
   content: '';
-  background: url("background.jpg") no-repeat;
+  background: url("background.jpg") no-repeat 70% 50%;
   background-size: auto;
   position: absolute;
   top: 0px;
@@ -86,6 +103,7 @@ html, body {
   height: 100%;
   z-index: -1; }
 
+/* line 106, main.sass */
 .welcomePage::after {
   content: '';
   background: rgba(50, 0, 0, 0.6);
@@ -96,15 +114,18 @@ html, body {
   height: 100%;
   z-index: -1; }
 
+/* line 120, main.sass */
 #sub-wrappa {
   padding: 3vh 10vw;
   clear: both; }
 
+/* line 126, main.sass */
 #about h2 {
   margin-bottom: 9vh;
   border-bottom: black 1px solid;
   font-size: 3vw; }
 
+/* line 131, main.sass */
 #about img {
   float: left;
   width: 30vw;
@@ -113,19 +134,23 @@ html, body {
   shape-outside: circle();
   padding-right: 3vw; }
 
+/* line 138, main.sass */
 #about p {
   color: black;
   font-size: 25px;
   text-align: left;
   font-family: sans-serif; }
+  /* line 143, main.sass */
   #about p span {
     color: red;
     font-family: 'Quicksand'; }
 
+/* line 146, main.sass */
 #btm {
   border: 1px orange solid;
   height: 300px;
   margin: 10px 200px; }
+  /* line 150, main.sass */
   #btm i {
     font-size: 190px;
     float: right;
