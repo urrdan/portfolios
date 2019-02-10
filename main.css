@@ -72,7 +72,6 @@ html, body {
       margin-top: 7%; }
       /* line 74, main.sass */
       .welcomePage #menu ul li {
-        font-size: 4vw;
         border: 2px solid #ffeb3b;
         border-radius: 3px;
         color: #ffeb3b;
@@ -82,16 +81,16 @@ html, body {
         padding: 0 1vh;
         text-align: centre;
         text-decoration: none; }
-        /* line 86, main.sass */
+        /* line 85, main.sass */
         .welcomePage #menu ul li:hover {
           background: #ffeb3b;
           color: black; }
-        /* line 89, main.sass */
+        /* line 88, main.sass */
         .welcomePage #menu ul li a {
           text-decoration: none;
           color: inherit; }
 
-/* line 93, main.sass */
+/* line 92, main.sass */
 .welcomePage::before {
   content: '';
   background: url("background.jpg") no-repeat 70% 50%;
@@ -103,7 +102,7 @@ html, body {
   height: 100%;
   z-index: -1; }
 
-/* line 106, main.sass */
+/* line 105, main.sass */
 .welcomePage::after {
   content: '';
   background: rgba(50, 0, 0, 0.6);
@@ -114,18 +113,18 @@ html, body {
   height: 100%;
   z-index: -1; }
 
-/* line 120, main.sass */
+/* line 119, main.sass */
 #sub-wrappa {
   padding: 3vh 10vw;
   clear: both; }
 
-/* line 126, main.sass */
+/* line 125, main.sass */
 #about h2 {
+  font-size: 3vw;
   margin-bottom: 9vh;
-  border-bottom: black 1px solid;
-  font-size: 3vw; }
+  border-bottom: black 1px solid; }
 
-/* line 131, main.sass */
+/* line 130, main.sass */
 #about img {
   float: left;
   width: 30vw;
@@ -134,24 +133,89 @@ html, body {
   shape-outside: circle();
   padding-right: 3vw; }
 
-/* line 138, main.sass */
+/* line 137, main.sass */
 #about p {
   color: black;
   font-size: 25px;
   text-align: left;
   font-family: sans-serif; }
-  /* line 143, main.sass */
+  /* line 142, main.sass */
   #about p span {
     color: red;
     font-family: 'Quicksand'; }
 
-/* line 146, main.sass */
+/* line 145, main.sass */
 #btm {
   border: 1px orange solid;
   height: 300px;
-  margin: 10px 200px; }
-  /* line 150, main.sass */
+  margin: 10px 200px;
+  position: relative;
+  padding: 1vh 5vw; }
+  /* line 151, main.sass */
+  #btm h5 {
+    text-align: center; }
+  /* line 153, main.sass */
   #btm i {
-    font-size: 190px;
+    font-size: 6vw;
     float: right;
-    margin: 55px 3px; }
+    margin: 5vw; }
+  /* line 157, main.sass */
+  #btm .fa-angle-right {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0px; }
+
+/* line 163, main.sass */
+footer {
+  background: gray; }
+
+@media screen and (min-width: 480px) {
+  /* line 33, _desktop.sass */
+  .welcomePage #menu ul li {
+    font-size: 2.5vw; }
+  /* line 55, _desktop.sass */
+  #about h2 {
+    font-size: 3vw; }
+  /* line 60, _desktop.sass */
+  #about p {
+    font-size: 25px; } }
+
+@media screen and (max-width: 480px) {
+  /* line 27, _phone.sass */
+  .welcomePage #menu #play {
+    font-size: 3vw; }
+  /* line 30, _phone.sass */
+  .welcomePage #menu .play {
+    border: none; }
+  /* line 34, _phone.sass */
+  .welcomePage #menu ul li {
+    font-size: 4vw; }
+  /* line 52, _phone.sass */
+  #sub-wrappa {
+    padding: 3vh 2vw; }
+  /* line 57, _phone.sass */
+  #about h2 {
+    font-size: 5vw;
+    margin-bottom: 5vh; }
+  /* line 63, _phone.sass */
+  #about p {
+    font-family: 'Quicksand';
+    font-size: 14px; }
+  /* line 69, _phone.sass */
+  #btm {
+    margin: 3px 0px;
+    position: relative;
+    padding: 1vh 5vw; }
+    /* line 74, _phone.sass */
+    #btm i {
+      font-size: 12vw;
+      margin: 5vw; }
+    /* line 77, _phone.sass */
+    #btm .fa-angle-right {
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin: 0px; } }

@@ -1,4 +1,4 @@
-$color1: #ffeb3b
+@import 'variables'
 html,body
     margin: 0px
     padding: 0px
@@ -49,7 +49,7 @@ html,body
             //background: red
             margin-bottom: 5%
             text-align: center;
-            font-size: 30px;
+            font-size: 30px
             
         #play
             //border-left : 2px solid white
@@ -72,7 +72,6 @@ html,body
             padding: 0px;
             margin-top: 7%
             li
-                font-size: 4vw
                 border: 2px solid $color1
                 border-radius: 3px;
                 color: $color1;
@@ -124,9 +123,9 @@ html,body
 #about
     
     h2
+        font-size: 3vw
         margin-bottom: 9vh
         border-bottom: black 1px solid
-        font-size: 3vw
 
     img
         float: left
@@ -146,11 +145,31 @@ html,body
 #btm 
   border: 1px orange solid
   height: 300px;
-  margin: 10px 200px;
+  margin: 10px 200px
+  position: relative
+  padding: 1vh 5vw
+  h5
+    text-align: center
   i
-    font-size: 190px;
+    font-size: 6vw
     float: right;
-    margin: 55px 3px;
+    margin: 5vw;
+  .fa-angle-right
+        position: absolute
+        right: 0px
+        top: 50%
+        transform: translate(0,-50%)
+        margin: 0px
+footer
+    background: gray
+    
 
+@media screen and (min-width: 480px) 
+    @import 'desktop'
+ 
     
+@media screen and (max-width: 480px) 
+    @import 'phone'
     
+
+
