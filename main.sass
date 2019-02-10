@@ -1,0 +1,156 @@
+$color1: #ffeb3b
+html,body
+    margin: 0px
+    padding: 0px
+    height: 100%;
+    width: 100%;
+
+*
+    margin: 0px
+
+.welcomePage
+    position: static
+    margin: 0px
+    width: 100%
+    height: 100%
+    color: white
+    section
+        float: left
+        padding-top: 20px
+        & span
+            display: block
+        span:nth-child(1)
+            font-size: 35px
+            font-weight: bold;
+        span:nth-child(2)
+            color: rgb(180,180,180)
+            font-weight: 300
+    #contacts
+        margin: 3vh
+        float: right
+        background: $color1
+        padding: 10px
+        border-radius: 50%
+        color: brown 
+    #menu
+        height: 80%
+        clear: both
+        //background: green
+        //text-align: center
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding-top: 10vh
+        
+        
+        #name
+            color: white
+            //background: red
+            margin-bottom: 5%
+            text-align: center;
+            font-size: 30px;
+            
+        #play
+            //border-left : 2px solid white
+            //border-right: 2px solid white
+            //padding: 0px 4px
+            //background: blue
+            font-size: 2vw
+            
+        .play
+            border:
+                bottom: 2px solid pink
+                right: 2px solid pink
+                left: 2px solid pink
+            padding: 0px 4px
+            text-align: center
+            width: 10vw
+            height: 4vh
+        ul
+            //background: red;
+            padding: 0px;
+            margin-top: 7%
+            li
+                font-size: 1.5vw
+                border: 2px solid $color1
+                border-radius: 3px;
+                color: $color1;
+                display: inline-block;
+                //padding: 8px;
+                list-style: none;
+                margin: 0 1vh 
+                padding: 0 3vh
+                text-align: centre
+                text-decoration: none
+                &:hover
+                    background: $color1;
+                    color: black;
+                a
+                    text-decoration: none
+                    color: inherit
+    
+.welcomePage::before
+    content: ''
+    background: url('background.jpg') no-repeat
+    background-size: auto
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    //border: 0.3px red solid;
+    z-index: -1
+    
+
+.welcomePage::after
+    content: ''
+    background: rgba(50,0,0,0.6);
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    z-index: -1
+    
+
+    
+    
+    
+#sub-wrappa
+    //background: yellow
+    padding: 3vh 10vw;
+    clear: both
+#about
+    
+    h2
+        margin-bottom: 9vh
+        border-bottom: black 1px solid
+        font-size: 3vw
+
+    img
+        float: left
+        width: 30vw
+        height: 30vw
+        border-radius: 50%
+        shape-outside: circle()
+        padding-right: 3vw 
+    p
+        color: black;
+        font-size: 25px;
+        text-align: left;
+        font-family: sans-serif;
+        span
+            color: red
+            font-family: 'Quicksand'
+#btm 
+  border: 1px orange solid
+  height: 300px;
+  margin: 10px 200px;
+  i
+    font-size: 190px;
+    float: right;
+    margin: 55px 3px;
+
+    
+    

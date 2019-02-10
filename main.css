@@ -1,0 +1,132 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%; }
+
+* {
+  margin: 0px; }
+
+.welcomePage {
+  position: static;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  color: white; }
+  .welcomePage section {
+    float: left;
+    padding-top: 20px; }
+    .welcomePage section span {
+      display: block; }
+    .welcomePage section span:nth-child(1) {
+      font-size: 35px;
+      font-weight: bold; }
+    .welcomePage section span:nth-child(2) {
+      color: #b4b4b4;
+      font-weight: 300; }
+  .welcomePage #contacts {
+    margin: 3vh;
+    float: right;
+    background: #ffeb3b;
+    padding: 10px;
+    border-radius: 50%;
+    color: brown; }
+  .welcomePage #menu {
+    height: 80%;
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh; }
+    .welcomePage #menu #name {
+      color: white;
+      margin-bottom: 5%;
+      text-align: center;
+      font-size: 30px; }
+    .welcomePage #menu #play {
+      font-size: 2vw; }
+    .welcomePage #menu .play {
+      border-bottom: 2px solid pink;
+      border-right: 2px solid pink;
+      border-left: 2px solid pink;
+      padding: 0px 4px;
+      text-align: center;
+      width: 10vw;
+      height: 4vh; }
+    .welcomePage #menu ul {
+      padding: 0px;
+      margin-top: 7%; }
+      .welcomePage #menu ul li {
+        font-size: 1.5vw;
+        border: 2px solid #ffeb3b;
+        border-radius: 3px;
+        color: #ffeb3b;
+        display: inline-block;
+        list-style: none;
+        margin: 0 1vh;
+        padding: 0 3vh;
+        text-align: centre;
+        text-decoration: none; }
+        .welcomePage #menu ul li:hover {
+          background: #ffeb3b;
+          color: black; }
+        .welcomePage #menu ul li a {
+          text-decoration: none;
+          color: inherit; }
+
+.welcomePage::before {
+  content: '';
+  background: url("background.jpg") no-repeat;
+  background-size: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+.welcomePage::after {
+  content: '';
+  background: rgba(50, 0, 0, 0.6);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+#sub-wrappa {
+  padding: 3vh 10vw;
+  clear: both; }
+
+#about h2 {
+  margin-bottom: 9vh;
+  border-bottom: black 1px solid;
+  font-size: 3vw; }
+
+#about img {
+  float: left;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  shape-outside: circle();
+  padding-right: 3vw; }
+
+#about p {
+  color: black;
+  font-size: 25px;
+  text-align: left;
+  font-family: sans-serif; }
+  #about p span {
+    color: red;
+    font-family: 'Quicksand'; }
+
+#btm {
+  border: 1px orange solid;
+  height: 300px;
+  margin: 10px 200px; }
+  #btm i {
+    font-size: 190px;
+    float: right;
+    margin: 55px 3px; }
