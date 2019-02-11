@@ -1,1 +1,8 @@
 $color1: #ffeb3b
+@mixin bg-card($img)
+    float: right
+    height: inherit
+    width: 70%
+    background: url(#{$img}) no-repeat right top
+    background-size: auto 22.5vh
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 30% 0%); 

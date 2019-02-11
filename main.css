@@ -7,31 +7,32 @@ html, body {
 
 /* line 8, main.sass */
 * {
-  margin: 0px; }
+  margin: 0px;
+  box-sizing: border-box; }
 
-/* line 11, main.sass */
+/* line 12, main.sass */
 .welcomePage {
   position: static;
   margin: 0px;
   width: 100%;
   height: 100%;
   color: white; }
-  /* line 17, main.sass */
+  /* line 18, main.sass */
   .welcomePage section {
     float: left;
     padding-top: 20px; }
-    /* line 20, main.sass */
+    /* line 21, main.sass */
     .welcomePage section span {
       display: block; }
-    /* line 22, main.sass */
+    /* line 23, main.sass */
     .welcomePage section span:nth-child(1) {
       font-size: 35px;
       font-weight: bold; }
-    /* line 25, main.sass */
+    /* line 26, main.sass */
     .welcomePage section span:nth-child(2) {
       color: #b4b4b4;
       font-weight: 300; }
-  /* line 28, main.sass */
+  /* line 29, main.sass */
   .welcomePage #contacts {
     margin: 3vh;
     float: right;
@@ -39,7 +40,7 @@ html, body {
     padding: 10px;
     border-radius: 50%;
     color: brown; }
-  /* line 35, main.sass */
+  /* line 36, main.sass */
   .welcomePage #menu {
     height: 80%;
     clear: both;
@@ -47,30 +48,30 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 10vh; }
-    /* line 47, main.sass */
+    padding-top: 30vh; }
+    /* line 48, main.sass */
     .welcomePage #menu #name {
       color: white;
       margin-bottom: 5%;
       text-align: center;
       font-size: 30px; }
-    /* line 54, main.sass */
+    /* line 55, main.sass */
     .welcomePage #menu #play {
       font-size: 2vw; }
-    /* line 61, main.sass */
+    /* line 62, main.sass */
     .welcomePage #menu .play {
       border-bottom: 2px solid pink;
       border-right: 2px solid pink;
       border-left: 2px solid pink;
       padding: 0px 4px;
       text-align: center;
-      width: 10vw;
+      width: 20vw;
       height: 4vh; }
-    /* line 70, main.sass */
+    /* line 71, main.sass */
     .welcomePage #menu ul {
       padding: 0px;
       margin-top: 7%; }
-      /* line 74, main.sass */
+      /* line 75, main.sass */
       .welcomePage #menu ul li {
         border: 2px solid #ffeb3b;
         border-radius: 3px;
@@ -81,16 +82,16 @@ html, body {
         padding: 0 1vh;
         text-align: centre;
         text-decoration: none; }
-        /* line 85, main.sass */
+        /* line 86, main.sass */
         .welcomePage #menu ul li:hover {
           background: #ffeb3b;
           color: black; }
-        /* line 88, main.sass */
+        /* line 89, main.sass */
         .welcomePage #menu ul li a {
           text-decoration: none;
           color: inherit; }
 
-/* line 92, main.sass */
+/* line 95, main.sass */
 .welcomePage::before {
   content: '';
   background: url("background.jpg") no-repeat 70% 50%;
@@ -102,7 +103,7 @@ html, body {
   height: 100%;
   z-index: -1; }
 
-/* line 105, main.sass */
+/* line 107, main.sass */
 .welcomePage::after {
   content: '';
   background: rgba(50, 0, 0, 0.6);
@@ -113,18 +114,18 @@ html, body {
   height: 100%;
   z-index: -1; }
 
-/* line 119, main.sass */
+/* line 121, main.sass */
 #sub-wrappa {
   padding: 3vh 10vw;
   clear: both; }
 
-/* line 125, main.sass */
-#about h2 {
+/* line 126, main.sass */
+.heading {
   font-size: 3vw;
   margin-bottom: 9vh;
   border-bottom: black 1px solid; }
 
-/* line 130, main.sass */
+/* line 131, main.sass */
 #about img {
   float: left;
   width: 30vw;
@@ -133,33 +134,33 @@ html, body {
   shape-outside: circle();
   padding-right: 3vw; }
 
-/* line 137, main.sass */
+/* line 138, main.sass */
 #about p {
   color: black;
   font-size: 25px;
   text-align: left;
   font-family: sans-serif; }
-  /* line 142, main.sass */
+  /* line 144, main.sass */
   #about p span {
     color: red;
     font-family: 'Quicksand'; }
 
-/* line 145, main.sass */
+/* line 147, main.sass */
 #btm {
   border: 1px orange solid;
   height: 300px;
   margin: 10px 200px;
   position: relative;
   padding: 1vh 5vw; }
-  /* line 151, main.sass */
+  /* line 153, main.sass */
   #btm h5 {
     text-align: center; }
-  /* line 153, main.sass */
+  /* line 155, main.sass */
   #btm i {
     font-size: 6vw;
     float: right;
     margin: 5vw; }
-  /* line 157, main.sass */
+  /* line 159, main.sass */
   #btm .fa-angle-right {
     position: absolute;
     right: 0px;
@@ -167,9 +168,65 @@ html, body {
     transform: translate(0, -50%);
     margin: 0px; }
 
-/* line 163, main.sass */
+/* line 165, main.sass */
+.project {
+  width: 100%;
+  height: 20vh;
+  margin-top: 5vh;
+  font-family: 'Quicksand';
+  text-align: center;
+  box-shadow: 0 0 5px gray;
+  position: relative; }
+  /* line 176, main.sass */
+  .project .sidenote {
+    float: left;
+    width: 30%;
+    font-size: 10vw; }
+    /* line 181, main.sass */
+    .project .sidenote button {
+      border: brown 1px solid;
+      background: none;
+      font-weight: 600;
+      position: absolute;
+      top: 80%;
+      left: 5%; }
+      /* line 188, main.sass */
+      .project .sidenote button a {
+        text-decoration: none;
+        color: brown; }
+      /* line 191, main.sass */
+      .project .sidenote button:hover {
+        background: #ffeb3b; }
+  /* line 193, main.sass */
+  .project #fst {
+    float: right;
+    height: inherit;
+    width: 70%;
+    background: url(bitcoin.jpg) no-repeat right top;
+    background-size: auto 22.5vh;
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 30% 0%); }
+  /* line 195, main.sass */
+  .project #scd {
+    float: right;
+    height: inherit;
+    width: 70%;
+    background: url(minneapolis.jpg) no-repeat right top;
+    background-size: auto 22.5vh;
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 30% 0%); }
+  /* line 197, main.sass */
+  .project #trd {
+    float: right;
+    height: inherit;
+    width: 70%;
+    background: url(gym.jpg) no-repeat right top;
+    background-size: auto 22.5vh;
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 30% 0%); }
+
+/* line 200, main.sass */
 footer {
-  background: gray; }
+  background: #b4b4b4;
+  margin-top: 3vh;
+  padding: 12px 0px; }
 
 @media screen and (min-width: 480px) {
   /* line 33, _desktop.sass */
@@ -185,37 +242,43 @@ footer {
 @media screen and (max-width: 480px) {
   /* line 27, _phone.sass */
   .welcomePage #menu #play {
-    font-size: 3vw; }
-  /* line 30, _phone.sass */
+    font-size: 3vw;
+    font-family: 'Quicksand'; }
+  /* line 31, _phone.sass */
   .welcomePage #menu .play {
     border: none; }
-  /* line 34, _phone.sass */
+  /* line 35, _phone.sass */
   .welcomePage #menu ul li {
     font-size: 4vw; }
-  /* line 52, _phone.sass */
+  /* line 53, _phone.sass */
   #sub-wrappa {
     padding: 3vh 2vw; }
-  /* line 57, _phone.sass */
-  #about h2 {
+  /* line 55, _phone.sass */
+  .heading {
     font-size: 5vw;
-    margin-bottom: 5vh; }
+    margin: 5vh 0;
+    border-bottom: black 1px solid; }
   /* line 63, _phone.sass */
   #about p {
     font-family: 'Quicksand';
-    font-size: 14px; }
-  /* line 69, _phone.sass */
+    font-size: 17px; }
+  /* line 70, _phone.sass */
   #btm {
     margin: 3px 0px;
     position: relative;
     padding: 1vh 5vw; }
-    /* line 74, _phone.sass */
+    /* line 75, _phone.sass */
     #btm i {
       font-size: 12vw;
       margin: 5vw; }
-    /* line 77, _phone.sass */
+    /* line 78, _phone.sass */
     #btm .fa-angle-right {
       position: absolute;
       right: 0px;
       top: 50%;
       transform: translate(0, -50%);
-      margin: 0px; } }
+      margin: 0px; }
+  /* line 84, _phone.sass */
+  footer {
+    height: 10vh;
+    text-align: center; } }
