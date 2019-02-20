@@ -1,4 +1,5 @@
 @import 'variables'
+
 html,body
     margin: 0px
     padding: 0px
@@ -8,6 +9,10 @@ html,body
 *
     margin: 0px
     box-sizing: border-box
+
+.logo
+    font-family: nth( $fonts, 5)
+    
 
 .welcomePage
     position: static
@@ -24,15 +29,21 @@ html,body
             font-size: 35px
             font-weight: bold;
         span:nth-child(2)
-            color: rgb(180,180,180)
+            color: rgb(190,190,190)
             font-weight: 300
+            font-family: nth( $fonts, 2)
+            margin: 3px
     #contacts
         margin: 3vh
-        float: right
+        position: fixed
+        top: 20px
+        right: 20px
         background: $color1
         padding: 10px
         border-radius: 50%
         color: brown 
+        box-shadow: black 0 0 10px 
+        z-index: 1
     #menu
         height: 80%
         clear: both
@@ -51,44 +62,47 @@ html,body
             margin-bottom: 5%
             text-align: center;
             font-size: 30px
+            font-family: nth( $fonts, 1)
+            font-weight: 700
+            text-transform: uppercase
+            animation: movefromtop 2s
             
         #play
-            //border-left : 2px solid white
-            //border-right: 2px solid white
-            //padding: 0px 4px
-            //background: blue
-            font-size: 2vw
+            font-size: 20px
+            color: #F2F2F2
+            
             
         .play
-            border:
-                bottom: 2px solid pink
-                right: 2px solid pink
-                left: 2px solid pink
             padding: 0px 4px
             text-align: center
-            width: 20vw
             height: 4vh
+            font-family: nth( $fonts, 3)
         ul
             //background: red;
             padding: 0px;
-            margin-top: 7%
+            margin-top: 35%
             li
-                border: 2px solid $color1
-                border-radius: 3px;
-                color: $color1;
                 display: inline-block;
                 //padding: 8px;
                 list-style: none;
-                margin: 0 1vh 
-                padding: 0 1vh
-                text-align: centre
+                width: 27vw
+                margin: 0 1vw 
+                padding: 1.5vw 0
+                text-align: center
                 text-decoration: none
+                border-radius: 50px
+                color: white
+                font-family: nth( $fonts, 1)
+                background: linear-gradient(to left, #F7833D 0%,  #F7473D)
+                animation: movefrombottom 1s
+                
                 &:hover
                     background: $color1;
                     color: black;
                 a
                     text-decoration: none
                     color: inherit
+                    margin: auto
 
                     
                     
@@ -106,7 +120,7 @@ html,body
 
 .welcomePage::after
     content: ''
-    background: rgba(50,0,0,0.6);
+    background: rgba(0,0,0,0.6);
     position: absolute
     top: 0px
     left: 0px
@@ -128,50 +142,59 @@ html,body
     margin-bottom: 9vh
     border-bottom: black 1px solid
 #about
+    padding: 7%
+    font-weight: 600
+    font-family: nth( $fonts, 1)
     img
-        float: left
-        width: 30vw
-        height: 30vw
+        display: block
+        margin: auto
+        width: 60vw
+        height: 60vw
         border-radius: 50%
-        shape-outside: circle()
-        padding-right: 3vw 
+        //shape-outside: circle() 
+        margin-bottom: 50px
     p
         color: black;
         font-size: 25px;
         text-align: left;
-        font-family: sans-serif;
+        font-family: nth( $fonts, 4)
         
         span
             color: red
-            font-family: 'Quicksand'
-#btm 
-  border: 1px orange solid
-  height: 300px;
-  margin: 10px 200px
-  position: relative
-  padding: 1vh 5vw
-  h5
+            font-family: nth( $fonts, 3)
+  
+    
+#knows
+    background: linear-gradient(to left, #F7833D 0%,  #F7473D)
+    font-family: nth( $fonts, 2)
+    margin: 10px 0
+    width: 100%
+    position: relative
+    padding: 5% 5% 10%
     text-align: center
-  i
-    font-size: 6vw
-    float: right;
-    margin: 5vw;
-  .fa-angle-right
-        position: absolute
-        right: 0px
-        top: 50%
-        transform: translate(0,-50%)
-        margin: 0px
+    h3
+        margin-bottom: 7%
+    div
+        width: 22%
+        display: inline-block
+        //background: white
+        margin: 4% 2% 
+        color: white
+        i
+            margin-bottom: 5px
+            font-size: 12vw
+            color: black
+.heading
+        font-family: nth( $fonts, 1)
+            
 .project
     width: 100%
     height: 20vh
     //background: brown
     margin-top: 5vh
-    font-family: 'Quicksand'
     text-align: center
     box-shadow: 0 0 5px gray
     position: relative
-    
             
     .sidenote
         float: left
@@ -199,9 +222,30 @@ html,body
             
 footer
     background: rgb(180,180,180)
+    margin: -3vh -2vw
     margin-top: 3vh
     padding: 12px 0px
     
+
+@keyframes movefromtop
+    0%
+        opacity: 0
+        transform: translateY(-100px)
+    80%
+        transform: translateY(10px)
+    100%
+        opacity: 1
+        transform: translateY(0px)
+
+@keyframes movefrombottom
+    0%
+        opacity: 0
+        transform: translateX(10px)
+    80%
+        transform: translateX(-10px)
+    100%
+        opacity: 1
+        transform: translateX(0px)
 
 @media screen and (min-width: 480px) 
     @import 'desktop'
