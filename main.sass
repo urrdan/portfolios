@@ -93,7 +93,7 @@ html,body
                 border-radius: 50px
                 color: white
                 font-family: nth( $fonts, 1)
-                background: linear-gradient(to left, #F7833D 0%,  #F7473D)
+                background: $background
                 animation: movefrombottom 1s
                 
                 &:hover
@@ -138,15 +138,20 @@ html,body
     clear: both
     
 .heading
-    font-size: 3vw
+    font-size: 5vw
+    margin: 5vh 0
+    border-bottom: black 1px solid
     margin-bottom: 9vh
     border-bottom: black 1px solid
+    padding: 3vh 2vw
+    text-transform: uppercase
 #about
     padding: 7%
     font-weight: 600
     font-family: nth( $fonts, 1)
-    img
-        display: block
+    #img
+        background: url('yaraa.jpg') no-repeat
+        //display: block
         margin: auto
         width: 60vw
         height: 60vw
@@ -155,25 +160,24 @@ html,body
         margin-bottom: 50px
     p
         color: black;
-        font-size: 25px;
+        font-size: 18px;
         text-align: left;
         font-family: nth( $fonts, 4)
-        
-        span
-            color: red
-            font-family: nth( $fonts, 3)
+        font-weight: 600
   
     
 #knows
-    background: linear-gradient(to left, #F7833D 0%,  #F7473D)
+    background: $background
     font-family: nth( $fonts, 2)
     margin: 10px 0
     width: 100%
-    position: relative
+    //position: relative
     padding: 5% 5% 10%
     text-align: center
     h3
         margin-bottom: 7%
+        &:not(:first-child)
+            margin-top: 30%
     div
         width: 22%
         display: inline-block
@@ -184,8 +188,16 @@ html,body
             margin-bottom: 5px
             font-size: 12vw
             color: black
+            img
+                //background: none
+                width: 12vw
+        
 .heading
         font-family: nth( $fonts, 1)
+        font-size: 6vw
+        margin: 5vh 0
+        border-bottom: black 1px solid
+        padding: 5px
             
 .project
     width: 100%
@@ -219,12 +231,46 @@ html,body
         @include bg-card('minneapolis.jpg')
     #trd
         @include bg-card('gym.jpg')
+  
+#comments
+    margin: 15% 0
+    font-family: nth( $fonts, 1)
+    //background: linear-gradient(to left, #F7833D 0%,  #F7473D) 
+    .comment
+        padding: 3%
+        width: 84%
+        margin: auto
+        background: $background
+        //clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%)
+        margin-bottom: 10%
+        transform: skewX(20deg)
+        p 
+            //padding: 30px
+            margin-bottom: 5%
+        span
+            display: block
+            text-align: right
+            margin: 5% 5% 0 
             
+#contacts
+    .contact
+        background: $color3
+        width: 50%
+        margin: auto
+        margin-bottom: 10px
+        text-align: center
+        height: 40vw
+        padding: 5px
+        i
+            margin: 15px 0 30px
+            font-size: 50px
 footer
     background: rgb(180,180,180)
     margin: -3vh -2vw
     margin-top: 3vh
     padding: 12px 0px
+    height: 10vh
+    text-align: center
     
 
 @keyframes movefromtop
