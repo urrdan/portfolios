@@ -6,7 +6,6 @@ $(document).ready(function(){
         play++
         if (play>3){play=0}
     },2000)
-    console.log(play)
     
     /*$(window).scroll(function(){
         var scrolled=$(window).scrollTop()
@@ -18,4 +17,3 @@ $(document).ready(function(){
         console.log(scrolled,screenheight)
     })*/
 })
-    console.log('hello')

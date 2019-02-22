@@ -30,16 +30,17 @@ html, body {
       font-weight: 300;
       font-family: "Rajdhani";
       margin: 3px; }
-  .welcomePage #contacts {
+  .welcomePage #menu-bar {
     margin: 3vh;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     background: #F7473D;
     padding: 10px;
     border-radius: 50%;
     color: brown;
     box-shadow: black 0 0 10px;
+    color: black;
     z-index: 1; }
   .welcomePage #menu {
     height: 80%;
@@ -72,9 +73,9 @@ html, body {
       .welcomePage #menu ul li {
         display: inline-block;
         list-style: none;
-        width: 27vw;
+        width: 29vw;
         margin: 0 1vw;
-        padding: 1.5vw 0;
+        padding: 1.6vw 0;
         text-align: center;
         text-decoration: none;
         border-radius: 50px;
@@ -82,9 +83,6 @@ html, body {
         font-family: "Montserrat";
         background: linear-gradient(to left, #F7833D 0%, #F7473D);
         animation: movefrombottom 1s; }
-        .welcomePage #menu ul li:hover {
-          background: #F7473D;
-          color: black; }
         .welcomePage #menu ul li a {
           text-decoration: none;
           color: inherit;
@@ -112,7 +110,7 @@ html, body {
   z-index: -1; }
 
 #sub-wrappa {
-  padding: 3vh 10vw;
+  padding: 3vh 5vw;
   clear: both; }
 
 .heading {
@@ -125,20 +123,22 @@ html, body {
   text-transform: uppercase; }
 
 #about {
-  padding: 7%;
+  padding: 5%;
   font-weight: 600;
   font-family: "Montserrat"; }
   #about #img {
-    background: url("yaraa.jpg") no-repeat;
+    background: url("yaraa.jpg") no-repeat 10% 100%;
+    background-size: 70vw;
     margin: auto;
-    width: 60vw;
-    height: 60vw;
+    width: 70vw;
+    height: 85vw;
     border-radius: 50%;
+    border: #F7473D 1px solid;
     margin-bottom: 50px; }
   #about p {
     color: black;
     font-size: 18px;
-    text-align: left;
+    text-align: center;
     font-family: "Indie Flower";
     font-weight: 600; }
 
@@ -222,11 +222,10 @@ html, body {
   font-family: "Montserrat"; }
   #comments .comment {
     padding: 3%;
-    width: 84%;
+    width: 100%;
     margin: auto;
     background: linear-gradient(to left, #F7833D 0%, #F7473D);
-    margin-bottom: 10%;
-    transform: skewX(20deg); }
+    margin-bottom: 10%; }
     #comments .comment p {
       margin-bottom: 5%; }
     #comments .comment span {
@@ -248,7 +247,6 @@ html, body {
 
 footer {
   background: #b4b4b4;
-  margin: -3vh -2vw;
   margin-top: 3vh;
   padding: 12px 0px;
   height: 10vh;

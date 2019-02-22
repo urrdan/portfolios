@@ -33,16 +33,17 @@ html,body
             font-weight: 300
             font-family: nth( $fonts, 2)
             margin: 3px
-    #contacts
+    #menu-bar
         margin: 3vh
         position: fixed
-        top: 20px
-        right: 20px
+        top: 10px
+        right: 10px
         background: $color1
         padding: 10px
         border-radius: 50%
         color: brown 
-        box-shadow: black 0 0 10px 
+        box-shadow: black 0 0 10px
+        color: black
         z-index: 1
     #menu
         height: 80%
@@ -85,9 +86,9 @@ html,body
                 display: inline-block;
                 //padding: 8px;
                 list-style: none;
-                width: 27vw
+                width: 29vw
                 margin: 0 1vw 
-                padding: 1.5vw 0
+                padding: 1.6vw 0
                 text-align: center
                 text-decoration: none
                 border-radius: 50px
@@ -97,8 +98,7 @@ html,body
                 animation: movefrombottom 1s
                 
                 &:hover
-                    background: $color1;
-                    color: black;
+                    
                 a
                     text-decoration: none
                     color: inherit
@@ -134,7 +134,7 @@ html,body
     
 #sub-wrappa
     //background: yellow
-    padding: 3vh 10vw;
+    padding: 3vh 5vw;
     clear: both
     
 .heading
@@ -146,22 +146,24 @@ html,body
     padding: 3vh 2vw
     text-transform: uppercase
 #about
-    padding: 7%
+    padding: 5%
     font-weight: 600
     font-family: nth( $fonts, 1)
     #img
-        background: url('yaraa.jpg') no-repeat
+        background: url('yaraa.jpg') no-repeat 10% 100% 
+        background-size: 70vw
         //display: block
         margin: auto
-        width: 60vw
-        height: 60vw
+        width: 70vw
+        height: 85vw
         border-radius: 50%
+        border: $color1 1px solid
         //shape-outside: circle() 
         margin-bottom: 50px
     p
         color: black;
         font-size: 18px;
-        text-align: left;
+        text-align: center;
         font-family: nth( $fonts, 4)
         font-weight: 600
   
@@ -238,15 +240,16 @@ html,body
     //background: linear-gradient(to left, #F7833D 0%,  #F7473D) 
     .comment
         padding: 3%
-        width: 84%
+        width: 100%
         margin: auto
         background: $background
         //clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%)
         margin-bottom: 10%
-        transform: skewX(20deg)
+        //transform: skewX(20deg)
         p 
             //padding: 30px
             margin-bottom: 5%
+            //transform: skewX(-20deg)
         span
             display: block
             text-align: right
@@ -266,7 +269,7 @@ html,body
             font-size: 50px
 footer
     background: rgb(180,180,180)
-    margin: -3vh -2vw
+    //margin: -3vh -2vw
     margin-top: 3vh
     padding: 12px 0px
     height: 10vh
@@ -296,9 +299,6 @@ footer
 @media screen and (min-width: 480px) 
     @import 'desktop'
  
-    
-@media screen and (max-width: 480px) 
-    @import 'phone'
     
 
 
