@@ -10,6 +10,32 @@ html,body
     margin: 0px
     box-sizing: border-box
 
+.visible
+    background: $color1
+    width: 34px
+    height: 31px
+    border-radius: 50%
+    
+    
+    
+.show-menu
+    display: initial
+    background: rgba(0,0,0,0.7)
+    text-align: left
+    font-family: nth( $fonts, 1)
+    
+    ul
+        padding: 0px
+        li
+            list-style: none
+            margin: 50px 60px 30px 30px
+            border-bottom: 2px $color1 solid
+            padding: 10px
+            a
+                text-decoration: none
+                color: white
+        
+
 .logo
     font-family: nth( $fonts, 5)
     
@@ -33,18 +59,29 @@ html,body
             font-weight: 300
             font-family: nth( $fonts, 2)
             margin: 3px
-    #menu-bar
-        margin: 3vh
+    .menu-bar
         position: fixed
         top: 10px
-        right: 10px
-        background: $color1
-        padding: 10px
-        border-radius: 50%
-        color: brown 
-        box-shadow: black 0 0 10px
-        color: black
+        right: 5vw
         z-index: 1
+        &>*
+            display: inline-block
+        .hidden-menu
+            display: none
+        .menu-icon
+            //background: $color1
+            padding: 1px 6px
+            border-radius: 50%
+            color: black 
+            box-shadow: black 0 0 10px
+            position: absolute
+            top: 0px
+            right: 0px
+            font-size: 25px
+            .fa-times
+                color: white
+            
+                
     #menu
         height: 80%
         clear: both
@@ -66,7 +103,7 @@ html,body
             font-family: nth( $fonts, 1)
             font-weight: 700
             text-transform: uppercase
-            animation: movefromtop 2s
+            animation: movefromtop 2s 1.5s backwards
             
         #play
             font-size: 20px
@@ -95,7 +132,7 @@ html,body
                 color: white
                 font-family: nth( $fonts, 1)
                 background: $background
-                animation: movefrombottom 1s
+                animation: movefrombottom 1s 1.5s backwards
                 
                 &:hover
                     

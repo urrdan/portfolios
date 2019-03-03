@@ -8,6 +8,28 @@ html, body {
   margin: 0px;
   box-sizing: border-box; }
 
+.visible {
+  background: #F7473D;
+  width: 34px;
+  height: 31px;
+  border-radius: 50%; }
+
+.show-menu {
+  display: initial;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  font-family: "Montserrat"; }
+  .show-menu ul {
+    padding: 0px; }
+    .show-menu ul li {
+      list-style: none;
+      margin: 50px 60px 30px 30px;
+      border-bottom: 2px #F7473D solid;
+      padding: 10px; }
+      .show-menu ul li a {
+        text-decoration: none;
+        color: white; }
+
 .logo {
   font-family: "Marck Script"; }
 
@@ -30,18 +52,26 @@ html, body {
       font-weight: 300;
       font-family: "Rajdhani";
       margin: 3px; }
-  .welcomePage #menu-bar {
-    margin: 3vh;
+  .welcomePage .menu-bar {
     position: fixed;
     top: 10px;
-    right: 10px;
-    background: #F7473D;
-    padding: 10px;
-    border-radius: 50%;
-    color: brown;
-    box-shadow: black 0 0 10px;
-    color: black;
+    right: 5vw;
     z-index: 1; }
+    .welcomePage .menu-bar > * {
+      display: inline-block; }
+    .welcomePage .menu-bar .hidden-menu {
+      display: none; }
+    .welcomePage .menu-bar .menu-icon {
+      padding: 1px 6px;
+      border-radius: 50%;
+      color: black;
+      box-shadow: black 0 0 10px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      font-size: 25px; }
+      .welcomePage .menu-bar .menu-icon .fa-times {
+        color: white; }
   .welcomePage #menu {
     height: 80%;
     clear: both;
@@ -58,7 +88,7 @@ html, body {
       font-family: "Montserrat";
       font-weight: 700;
       text-transform: uppercase;
-      animation: movefromtop 2s; }
+      animation: movefromtop 2s 1.5s backwards; }
     .welcomePage #menu #play {
       font-size: 20px;
       color: #F2F2F2; }
@@ -82,7 +112,7 @@ html, body {
         color: white;
         font-family: "Montserrat";
         background: linear-gradient(to left, #F7833D 0%, #F7473D);
-        animation: movefrombottom 1s; }
+        animation: movefrombottom 1s 1.5s backwards; }
         .welcomePage #menu ul li a {
           text-decoration: none;
           color: inherit;

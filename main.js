@@ -7,13 +7,25 @@ $(document).ready(function(){
         if (play>3){play=0}
     },2000)
     
-    /*$(window).scroll(function(){
-        var scrolled=$(window).scrollTop()
-        var screenheight=$(window).height()
-        if(scrolled>(screenheight*0.9)){
-            $('.fixedHiddenMenu').css('background','red').siblings('#menu').children('ul').css('background','red')
-
+    $('.menu-icon').click(function(){
+        $('#hidden-menu').toggleClass('show-menu hidden-menu')
+        $('.fas').toggleClass('fa-times')
+        $('.menu-bar').toggleClass('visible')
+        
+        
+    })
+    
+    $(window).scroll(function(){
+        if($(window).scrollTop()<$(window).height()){
+            $('.menu-bar').css('display','none')
+        }else{
+            $('.menu-bar').css('display','initial')
         }
-        console.log(scrolled,screenheight)
-    })*/
+        //find away to improve the code below i.e to shorten it
+        //code for hidding menu when scrolling
+        $('#hidden-menu').removeClass('show-menu').addClass('hidden-menu')
+        $('.menu-bar').addClass('visible')
+        $('.fas').removeClass('fa-times').addClass('fa-bars')
+        
+    })
 })
