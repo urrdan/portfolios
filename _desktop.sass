@@ -2,10 +2,10 @@ html,body
     
 
 *
-    
+    box-sizing: border-box
+    text-align: center
 
 .welcomePage
-    
     section
         
         & span
@@ -17,21 +17,22 @@ html,body
     #contacts
          
     #menu
+        padding: 0px
+        width: 520px
+        left: 50%
+        transform: translate(-50%,0%)
         
         
-        
-        #name
-            
-            
-        #play
-            
+        #name    
             
         .play
+            #play
             
         ul
-            
             li
-                font-size: 2.5vw
+                width: 140px
+                padding: 5px
+                margin: 10px
                 &:hover
                     
                 a
@@ -49,18 +50,67 @@ html,body
     
     
 #sub-wrappa
-    
+    width: 60%
+    margin: auto
+    max-width: 752px
+    min-width: 663px
+    //border: .3px solid
+    padding: 3px 
+    //box-shadow: gray 0px 0px 5px
+
+.heading
+    font-size: 1.5em
+    margin: 5vh 0
+    border-bottom: black 1px solid
+    margin-bottom: 9vh
+    border-bottom: black 1px solid
+    padding: 3vh 2vw
+    text-transform: uppercase
+    text-align: left
+
 #about
+    >:not(:first-child)
+        margin: 10px
     
     h2
-        font-size: 3vw
+        //font-size: 3vw
 
-    img
+    #img
+        width: 20vw
+        height: 30vw
+        background-position: 10% 100%
+        background-size: 100%
+        float: left
+        border-radius: 10px
+        border: solid black 0.3px
+        margin: 10px
          
     p
-        font-size: 25px; 
-        span
+        font-size: 25px
+        text-align: left
+        padding: 10px
+        //float: left
+        //display: inline-block
+
+#knows
+    clear: both
+    div
+        i
+            font-size: 10vw
+            img
+                width: 10vw
             
-#btm 
-  
-  i
+.project
+    .sidenote
+        font-size: 1em
+
+#comments
+    .comment
+        width: 70%
+        padding: 10px 10%
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%)
+
+#contacts
+    .contact
+        width: 40%
+        height: 140px
