@@ -3,18 +3,20 @@
 html,body
     margin: 0px
     padding: 0px
-    height: 100%;
-    width: 100%;
+    height: 100%
+    width: 100%
+    scroll-behavior: smooth
 
 *
     margin: 0px
     box-sizing: border-box
+li
+    list-style: none
+a
+    text-decoration: none
+    color: white
 
-.visible
-    background: $color1
-    width: 34px
-    height: 31px
-    border-radius: 50%
+    //display: initial
     
     
     
@@ -23,7 +25,6 @@ html,body
     background: rgba(0,0,0,0.7)
     text-align: left
     font-family: nth( $fonts, 1)
-    
     ul
         padding: 0px
         li
@@ -36,145 +37,113 @@ html,body
                 color: white
         
 
-.logo
-    font-family: nth( $fonts, 5)
-    
-
 .welcomePage
     position: static
     margin: 0px
     width: 100%
     height: 100%
     color: white
-    section
-        float: left
-        padding-top: 20px
-        & span
-            display: block
-        span:nth-child(1)
-            font-size: 35px
-            font-weight: bold;
-        span:nth-child(2)
-            color: rgb(190,190,190)
-            font-weight: 300
-            font-family: nth( $fonts, 2)
-            margin: 3px
-    .menu-bar
-        position: fixed
-        top: 10px
-        right: 5vw
-        z-index: 1
-        &>*
+    display: grid
+    grid-template-rows: 1.5fr 1fr 1fr
+    padding: 10px 0px 30px
+    background: url('background.jpg') 70% 50%
+    position: relative
+    >*
+        z-index: 2
+    //dont take it out of this parent or the animation will be borrowed to its new location.
+    >ul
+        grid-row: 3/4
+        //background: red;
+        justify-self: center
+        align-self: center
+        padding: 0px
+        li
             display: inline-block
-        .hidden-menu
-            display: none
-        .menu-icon
-            //background: $color1
-            padding: 1px 6px
-            border-radius: 50%
-            color: black 
-            box-shadow: black 0 0 10px
-            position: absolute
-            top: 0px
-            right: 0px
-            font-size: 25px
-            .fa-times
-                color: white
-
-    #menu
-        position: absolute
-        top: 50%
-        bottom: 10%
-        //left: 50%
-        //transform: translate(-50%,0%)
-        clear: both
-        padding: 0.01px
-        //background: green
-        //text-align: center
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        align-items: center
-        
-        
-        #name
-            color: white
-            //background: red
-            text-align: center;
-            font-size: 30px
-            font-family: nth( $fonts, 1)
-            font-weight: 700
-            text-transform: uppercase
-            animation: movefromtop 2s 1.5s backwards
-            
-            
-        .play
+            //padding: 8px;
+            list-style: none;
+            width: 29vw
+            margin: 0 1vw 
+            padding: 1.6vw 0
             text-align: center
-            height: 0.1px
-            font-family: nth( $fonts, 3)
-            overflow: visible
-            margin-top: -20vh
-        
-            #play
-            font-size: 20px
-            color: #F2F2F2
-        ul
-            //background: red;
-            padding: 0px
-            li
-                display: inline-block;
-                //padding: 8px;
-                list-style: none;
-                width: 29vw
-                margin: 0 1vw 
-                padding: 1.6vw 0
-                text-align: center
-                text-decoration: none
-                border-radius: 50px
-                color: white
-                font-family: nth( $fonts, 1)
-                font-size: 1em
-                background: $background
-                animation: movefrombottom 1s 1.5s backwards
+            text-decoration: none
+            border-radius: 50px
+            color: white
+            font-family: nth( $fonts, 1)
+            font-size: 1em
+            background: $background
+            animation: movefrombottom 1s 1.5s backwards
+            
+            &:hover
                 
-                &:hover
-                    
-                a
-                    text-decoration: none
-                    color: inherit
-                    margin: auto                
-                 
-.welcomePage::before
-    content: ''
-    background: url('background.jpg') no-repeat 70% 50%
-    background-size: auto
-    position: absolute
-    top: 0px
-    left: 0px
-    width: 100%
-    height: 100%
-    //border: 0.3px red solid;
-    z-index: -1   
+            a
+                text-decoration: none
+                color: inherit
+                margin: auto
+.logoo
+    grid-row: 1/2
+    text-align: left
+    >* 
+        display: block
+            
+    span:nth-child(2)
+        color: rgb(190,190,190)
+        font-weight: 300
+        font-family: nth( $fonts, 2)
+        margin: 3px
+.logo
+    font-size: 35px
+    font-weight: bold
+    font-family: nth( $fonts, 5)
+    
+    
+#name
+    color: white
+    //background: red
+
+    text-align: center
+    font-size: 30px
+    font-family: nth( $fonts, 1)
+    font-weight: 700
+    text-transform: uppercase
+    animation: movefromtop 2s 1.5s backwards
+    margin-bottom: 20px
+    
+    
+.play
+    text-align: center
+    height: 0.1px
+    font-family: nth( $fonts, 3)
+    overflow: visible
+    //margin-top: -20vh
+
+    #play
+    font-size: 21px
+    color: #F2F2F2
+                
+                   
 
 .welcomePage::after
     content: ''
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.6)
     position: absolute
     top: 0px
     left: 0px
     width: 100%
     height: 100%
-    z-index: -1
-    
+    //z-index: 
 
-    
-    
-    
+
+.wrapper-cont
+    display: grid
+    grid-template-columns: minmax(10px,1fr) minmax(auto ,1000px) minmax(10px,1fr)
+.wrapper
+    grid-column: 2/3
+
+
 #sub-wrappa
     //background: yellow
-    padding: 3vh 5vw;
-    clear: both
-    
+    padding: 3vh 5vw
+ 
 .heading
     font-family: nth( $fonts, 1)
     margin: 5vh 0
@@ -185,13 +154,14 @@ html,body
     padding: 5px     
 
 #about
+    display: grid
+    grid-template: auto auto auto
     padding: 5%
     font-weight: 600
     font-family: nth( $fonts, 1)
     #img
         background: url('yaraa.jpg') no-repeat 10% 100% 
         background-size: 70vw
-        //display: block
         margin: auto
         width: 70vw
         height: 85vw
@@ -200,12 +170,12 @@ html,body
         //shape-outside: circle() 
         margin-bottom: 50px
     p
-        color: black;
+        color: rgba(0,0,0,0.75)
         font-size: 18px;
         text-align: center;
         font-family: nth( $fonts, 4)
         font-weight: 600
-        box-shadow: 0px 0px 10px rgb(200,200,200)
+        //box-shadow: 0px 0px 10px rgb(200,200,200)
   
     
 #knows
@@ -220,7 +190,7 @@ html,body
         margin-bottom: 7%
         &:not(:first-child)
             margin-top: 30%
-    div
+    .knowses>div
         width: 22%
         display: inline-block
         //background: white
@@ -307,7 +277,6 @@ footer
     padding: 12px 0px
     height: 10vh
     text-align: center
-    
 
 @keyframes movefromtop
     0%
@@ -331,7 +300,43 @@ footer
 
 @media screen and (min-width: 760px) 
     @import 'desktop'
- 
-    
+
+@media screen and (max-width: 760px) 
+    .sidebar-cont 
+        position: sticky
+        top: 0
+        background: black
+        color: white
+        font-size: 20px
+        .smll-scrn-menu
+            display: flex
+            //flex-direction: row
+            justify-content: space-between
+            align-items: center
+            padding: 0px 20px 
+
+    .sidebar
+        background: rgba(0,0,0,0.7)
+        display: grid
+        grid-template-rows: 3fr 1fr
+        >.logoo
+            display: none
+        display: none
+        >.side-contact
+            grid-row: -2/-1 
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            color: gray
+        >ul
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding: 0
+            text-align: right
+            li
+                margin: 20px
+    .sidebar-visible
+        display: grid
 
 

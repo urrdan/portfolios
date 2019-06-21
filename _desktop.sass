@@ -1,63 +1,61 @@
 html,body
-    
-
-*
-    box-sizing: border-box
-    text-align: center
 
 .welcomePage
-    section
+    height: 65%  
+    #name    
         
-        & span
-            
-        span:nth-child(1)
-            
-        span:nth-child(2)
-            
-    #contacts
-         
-    #menu
-        padding: 0px
-        width: 520px
-        left: 50%
-        transform: translate(-50%,0%)
+    .play
+        #play
         
-        
-        #name    
-            
-        .play
-            #play
-            
-        ul
-            li
-                width: 140px
-                padding: 5px
-                margin: 10px
-                &:hover
-                    
-                a
-                    
-    
-.welcomePage::before
-    
-    
+    ul
+        align-self: end
+        li
+            width: 140px
+            padding: 5px
+            margin: 10px
+            &:hover
+                
+            a
 
-.welcomePage::after
-    
-    
-
-    
-    
-    
+.sidebar
+    display: grid
+    grid-template-rows: 1fr 3fr 0.5fr 
+    width: 300px
+    background: rgba(0,0,0,0.7)
+    position: sticky
+    top: 0
+    color: white
+    >ul
+        grid-row: 2/3
+        text-align: right
+        padding-left: 20px
+        font-family: nth( $fonts, 3)
+        text-transform: uppercase
+        display: flex 
+        flex-direction: column
+        justify-content: space-between
+        padding: 100px 10px
+        li
+            background: grey
+            padding: 5px
+    .side-contact
+        border-top: solid black
+        padding-top: 15px
+        text-align: center
+        color: gray
+        font-size: 20px
+        i
+            margin: 10px
+.wrapper
+    display: grid
+    grid-template-columns: auto 1fr
 #sub-wrappa
-    width: 60%
+    width: 100%
     margin: auto
-    max-width: 752px
-    min-width: 663px
-    //border: .3px solid
+    border: .3px solid
     padding: 3px 
     //box-shadow: gray 0px 0px 5px
-
+    overflow: hidden
 .heading
     font-size: 1.5em
     margin: 5vh 0
@@ -69,32 +67,36 @@ html,body
     text-align: left
 
 #about
+    
     >:not(:first-child)
-        margin: 10px
+        //margin: 10px
     
     h2
         //font-size: 3vw
 
     #img
-        width: 20vw
-        height: 30vw
-        background-position: 10% 100%
-        background-size: 100%
-        float: left
-        border-radius: 10px
-        border: solid black 0.3px
-        margin: 10px
+        border-radius: 0%
+        width: 100%
+        height: 300px
          
     p
         font-size: 25px
         text-align: left
         padding: 10px
+        grid-row: 2/3
         //float: left
         //display: inline-block
 
 #knows
     clear: both
-    div
+    padding: 0
+    .knowses
+        display: flex
+        flex-direction: row
+        overflow: auto
+
+        
+        
         i
             font-size: 10vw
             img
@@ -112,7 +114,12 @@ html,body
 
 #contacts
     .contact
-        width: 40%
+        width: 180px
         height: 140px
+        display: inline-block
 
-        //better-designs
+    
+::-webkit-scrollbar
+    height: 3px
+::-webkit-scrollbar-thumb
+    background: #000
