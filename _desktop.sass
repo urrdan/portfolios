@@ -16,12 +16,15 @@ html,body
             &:hover
                 
             a
-
+.sidebar-cont
+    background: #000
+.smll-scrn-menu
+    display: none
 .sidebar
     display: grid
     grid-template-rows: 1fr 3fr 0.5fr 
     width: 300px
-    background: rgba(0,0,0,0.7)
+    background: rgba(247, 71, 61,0.2)
     position: sticky
     top: 0
     color: white
@@ -36,8 +39,14 @@ html,body
         justify-content: space-between
         padding: 100px 10px
         li
-            background: grey
+            //background: grey
             padding: 5px
+            border: transparent solid
+            &:hover
+                background: rgba(247, 71, 61,0.3)
+                border: 
+                    top: $color1 solid
+                    bottom: $color1 solid
     .side-contact
         border-top: solid black
         padding-top: 15px
@@ -52,7 +61,7 @@ html,body
 #sub-wrappa
     width: 100%
     margin: auto
-    border: .3px solid
+    //border: .3px solid
     padding: 3px 
     //box-shadow: gray 0px 0px 5px
     overflow: hidden
@@ -88,21 +97,32 @@ html,body
         //display: inline-block
 
 #knows
-    clear: both
+    //background: linear-gradient(to left, $color1 0%,  $color3)
     padding: 0
+    width: 95%
+    margin: auto
+    
+    h3
+        //margin-bottom: 5px
     .knowses
+        &::-webkit-scrollbar
+            width: 0px
+            height: 2px
+        &::-webkit-scrollbar-thumb
+            background: #000
         display: flex
         flex-direction: row
         overflow: auto
-
-        
-        
-        i
-            font-size: 10vw
-            img
-                width: 10vw
-            
-.project
+        >div
+            margin: 0px 15px 
+            i
+                font-size: 100px
+                img
+                    width: 80px
+#portfolio
+    >*:not(h2):not(p) 
+        display: none           
+.project 
     .sidenote
         font-size: 1em
 
@@ -113,13 +133,12 @@ html,body
         clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%)
 
 #contacts
+    text-align: center
     .contact
         width: 180px
-        height: 140px
+        height: 140px 
         display: inline-block
 
     
-::-webkit-scrollbar
-    height: 3px
-::-webkit-scrollbar-thumb
-    background: #000
+//::-webkit-scrollbar
+
