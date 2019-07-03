@@ -8,6 +8,7 @@ $(document).ready(function(){
     //initial setting
     $('.text-hid').slideUp(0)
     $('.see-moreOrHide:last').fadeOut(0)
+    $('.proj').addClass('projsudoclassbefore')
     small=$(window).outerWidth() < breakpoint
 
 
@@ -28,6 +29,7 @@ $(document).ready(function(){
             //console.log('big')
             $('.sidebar').removeClass('small')
             $('.sidebar').slideDown(0)
+            
         }
     })
 
@@ -47,6 +49,9 @@ $(document).ready(function(){
         $('.small').slideUp() 
     })
 
+
+    //windowscroll
+
     $(window).scroll(function(){
         if($(window).scrollTop()<$('.welcomePage').outerHeight()){
             $('.menu-bar').css('display','none')
@@ -59,9 +64,15 @@ $(document).ready(function(){
                 $('.sidebar').append(cloned.clone())
                 $('.sidebar>ul').prepend("<li><a href='#welcomePage'>HOME</a></li>")
             }
-        }
         
+        }
+        scrollanime('.proj:eq(0)')
+        scrollanime('.proj:eq(1)')
+        scrollanime('.proj:eq(2)')
     })
+
+
+
     
     $('.see-moreOrHide').click(function(){
         $('.text-hid').slideToggle()
@@ -71,3 +82,13 @@ $(document).ready(function(){
 
     $('.sidebar').height($(window).height())
 })
+
+function scrollanime(ele){
+    
+    if($(window).scrollTop()>($(ele).offset().top - $(window).innerHeight()+$(ele).outerHeight()/2 )){
+        $(ele).addClass('projsudoclassafter')
+        //$(ele).css({opacity: 1, transform: 'translate(50px)'})
+
+        console.log('proj')
+    }
+}

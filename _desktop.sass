@@ -17,17 +17,19 @@ html,body
                 
             a
 .sidebar-cont
-    background: #000
+    //background: #000
 .smll-scrn-menu
     display: none
 .sidebar
     display: grid
     grid-template-rows: 1fr 3fr 0.5fr 
-    width: 300px
-    background: rgba(247, 71, 61,0.2)
-    position: sticky
+    width: 250px
+    background: radial-gradient( $color1 30%,  $color3)//$background //rgba(247, 71, 61,0.2)
+    position: sticky 
     top: 0
     color: white
+    span:last-of-type
+        color: black
     >ul
         grid-row: 2/3
         text-align: right
@@ -42,16 +44,17 @@ html,body
             //background: grey
             padding: 5px
             border: transparent solid
+            //border-right: 4px solid gray  //for the current
             &:hover
-                background: rgba(247, 71, 61,0.3)
+                background: gray
                 border: 
-                    top: $color1 solid
-                    bottom: $color1 solid
+                    top: black solid
+                    bottom: black solid
     .side-contact
         border-top: solid black
         padding-top: 15px
         text-align: center
-        color: gray
+        color: black//gray
         font-size: 20px
         i
             margin: 10px
@@ -94,15 +97,15 @@ html,body
         text-align: center
         padding: 10px
         grid-row: 2/3
+        font-family: nth($fonts,2) 
         //float: left
         //display: inline-block
 
 #knows
     //background: linear-gradient(to left, $color1 0%,  $color3)
     padding: 0
-    width: 95%
+    //width: 95%
     margin: auto
-    
     h3
         //margin-bottom: 5px
     .knowses
@@ -115,17 +118,20 @@ html,body
         flex-direction: row
         overflow: auto
         >div
-            margin: 0px 15px 
+            margin: 0px 40px 
             i
                 font-size: 90px
                 img
                     width: 80px
 #portfolio
-    >*:not(h2):not(p) 
-        display: none           
-.project 
-    .sidenote
-        font-size: 1em
+    .proj
+        margin: 100px 0
+        &:nth-of-type(even)
+            .proj-info
+                grid-row: 1/2
+                text-align: left
+    img
+        height: 250px          
 
 #comments
     .comment
