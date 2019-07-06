@@ -5,7 +5,7 @@
     <meta name='viewport' content='width=device-width'>
     <meta name='theme-color' content='#F7473D'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Rajdhani|Dosis|Marck+Script|Indie+Flower|Montserrat|Ubuntu+Mono|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani|Dosis|Marck+Script|Indie+Flower|Montserrat|Ubuntu+Mono|Roboto+Slab|Muli" rel="stylesheet">
     <link rel='stylesheet' href="main.css">
     <script src='jquery.js'></script>
     <script src="main.js"></script>
@@ -14,20 +14,24 @@
     
 
 <body>
+<div class="welcome-cont-big">
+<div class="welcome-cont">
 <div id='welcomePage' class='welcomePage' >
     <section class="logoo">
         <span class='logo'>URRDAN</span>
         <span>web developer</span>
-    </section>
+    </section>  
     <section class='brand'>
         <div id='name'>Mohamed Abdulle</div>
         <div class='play'><span id='play'>creator</span></div>
     </section>
     <ul>
-        <li><a href='#about'>ABOUT</a></li>
-        <li><a href='#portfolio'>PORTFOLIO</a></li>
-        <li><a href='#contacts'>CONTACTS</a></li>
+        <a href='#about'><li>ABOUT</li></a>
+        <a href='#portfolio'><li>PORTFOLIO</li></a>
+        <a href='#contacts'><li>CONTACTS</li></a>
     </ul>
+</div>
+</div>
 </div>
 <div class="wrapper-cont">
     <div class="wrapper">
@@ -36,10 +40,12 @@
                 <span class='logo'>URRDAN</span>
                 <i class="menu-icon fas fa-bars "></i>
             </div>
-            <div class="sidebar">
+            <div class="small-sidebar sidebars">
+            </div>
+            <div class="sidebar sidebars">
                 <div class="side-contact">
                     <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-github"></i>
+                    <a href='https://github.com/urrdan'><i class="fab fa-github"></i></a>
                     <i class="far fa-envelope"></i>
                 </div>
                 
@@ -48,76 +54,15 @@
         <div id='sub-wrappa'>
             <section id='about'>
                 <h2 class='heading'>about</h2>
+                <h3>&#8810;  welcome   &#8811;</h3>
                 <div id='img'>
                     <div class="img"></div>
                     <div class="img"></div>
                 </div>
                 <!--very passionate about programming, amstrive the best -->
-                <p>Hello welcome to my personal porfolio website. The purpose of this website is to showcase my skills of web development to potential clients and employers.<br/> So who am I? Well I am smart, ambitious <span class="text-hid"> and innovative front-end web developer trying to break into the software development industry. My passion to program is second to none as evidenced by me coding every opportunity I get, whether its working on a project or learning a new skill.<br> Other than web Development I also enjoy playing soccer and explore the goodies Minneapolis has to offer every weekend.<br> My contacts is at the bottom of the page so if you require my services, want to work together on a project or simply have an opportunity that can further my career dont hesitate to hala. Thank you! </span><span class="see-moreOrHide"><br>more<br> &darr; </span> <span class="see-moreOrHide"> <br>&uarr;<br>hide</span></p>
+                <p>Hello welcome to my personal porfolio website whose purpose is to showcase my skills of web development to potential clients and employers. I am ambitious and innovative front-end web developer aspiring to be a full stack developer<span class="text-hid"> . My passion to program is second to none as evidenced by me coding every opportunity I get, whether its working on a project or learning a new skill.<br> Other than web Development I also enjoy playing soccer and explore the goodies Minneapolis has to offer every weekend.<br> My contacts is at the bottom of the page so if you require my services, want to work together on a project or simply have an opportunity that can further my career dont hesitate to hala. Thank you! </span><span class="see-moreOrHide"><br>more<br> &darr; </span> <span class="see-moreOrHide"> <br>&uarr;<br>hide</span></p>
                 
             </section>
-            <div id='portfolio'>
-                <h2 class='heading'>portfolio</h2>
-                <div class="proj">
-                    <img src="home-care.png" alt="">
-                    <section class="proj-info">
-                        <h3>Home Care</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, laboriosam.</p>
-                        
-                        <section>
-                            <button>View Code</button>
-                            <button>Visit Website</button>
-                        </section>
-                        <ul>
-                            <li>React</li>
-                            <li>Jquery</li>
-                            <li>Css</li>
-                            <li>Html</li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="proj">
-                    <img src="skysport-clone.png" alt="">
-                    <section class="proj-info">
-                        <h3>Skysports Clone</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, laboriosam.</p>
-                        <section>
-                            <button>View Code</button>
-                            <button>Visit Website</button>
-                        </section>
-                        <ul>
-                            <li>React</li>
-                            <li>Jquery</li>
-                            <li>Css</li>
-                            <li>Html</li>
-                        </ul>
-                    </section>
-                    
-                </div>
-                <div class="proj">
-                    <img src="shoe-store.png" alt="">
-                    <section class="proj-info">
-                        <h3>shoe Store</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, laboriosam.</p>
-                        
-                        <section>
-                            <button>View Code</button>
-                            <button>Visit Website</button>
-                        </section>
-                        <ul>
-                            <li>React</li>
-                            <li>Jquery</li>
-                            <li>Css</li>
-                            <li>Html</li>
-                            
-                        </ul>
-                    </section>
-                </div>
-                <p 
-                    style="color: red; font-size: 25px; margin-bottom: 100px; text-align: center">
-                    MORE COMING SOON
-                </p>
-            </div>
             <div id='knows'>
                 <h3>SKILLSET</h3>
                 <div class="knowses">
@@ -182,6 +127,70 @@
                     <h6>SQL</h6>
                 </div>
                 -->
+            <div id='portfolio'>
+                <h2 class='heading'>projects</h2>
+                <div class="proj">
+                    <img src="home-care.png" alt="">
+                    <section class="proj-info">
+                        <h3>Home Care</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, laboriosam.</p>
+                        
+                        <section>
+                            <a href='https://github.com/urrdan/ecomb'><button>View Code</button></a>
+                            <a href='https://urrdan.github.io/ecomb/'><button>Visit Website</button></a>
+                        </section>
+                        <ul>
+                            <li>React</li>
+                            <li>Jquery</li>
+                            <li>Css</li>
+                            <li>Html</li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <div class="proj">
+                    <img src="shoe-store.png" alt="">
+                    <section class="proj-info">
+                        <h3>shoe Store</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, laboriosam.</p>
+                        
+                        <section>
+                            <a href='https://github.com/urrdan/ecom'><button>View Code</button></a>
+                            <a href='https://urrdan.github.io/ecom/'><button>Visit Website</button></a>
+                        </section>
+                        <ul>
+                            <li>React</li>
+                            <li>Jquery</li>
+                            <li>Css</li>
+                            <li>Html</li>
+                            
+                        </ul>
+                    </section>
+                </div>
+                <div class="proj">
+                    <img src="skysport-clone.png" alt="">
+                    <section class="proj-info">
+                        <h3>Skysports Clone</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, laboriosam.</p>
+                        <section>
+                            <a href='https://github.com/urrdan/ecomb'><button>View Code</button></a>
+                            <a href='https://urrdan.github.io/ecomb/'><button>Visit Website</button></a>
+                        </section>
+                        <ul>
+                            <li>React</li>
+                            <li>Jquery</li>
+                            <li>Css</li>
+                            <li>Html</li>
+                        </ul>
+                    </section>
+                    
+                </div>
+                <p 
+                    style="color: red; font-size: 25px; margin-bottom: 100px; text-align: center">
+                    MORE COMING SOON
+                </p>
+            </div>
+            
             <div class='techniques'>
                 <div class="technique">
                     <i class="fas fa-users"></i>
@@ -223,7 +232,7 @@
                     <p>+16124020238</p>
                 </div>
                 <div class='contact'>
-                    <i class="fab fa-github"></i>
+                    <a href='https://github.com/urrdan'><i class="fab fa-github"></i></a>
                     <p><a href='https://www.google.com/'></a>github.com/urrdan</p>
                 </div>
                 <div class='contact'>

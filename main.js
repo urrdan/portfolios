@@ -1,15 +1,24 @@
 $(document).ready(function(){ 
 
     //variables
-    var breakpoint=760
     lst=['creator','programmer','coder','designer']
     var play=0
+
+
+    //functions
+    function scrollanime(ele,classtoadd){
+        //for animating element on scroll
+        if($(window).scrollTop()>($(ele).offset().top - $(window).innerHeight()+$(ele).outerHeight()/2 )){
+            $(ele).addClass(classtoadd) 
+        }
+    }
+
 
     //initial setting
     $('.text-hid').slideUp(0)
     $('.see-moreOrHide:last').fadeOut(0)
     $('.proj').addClass('projsudoclassbefore')
-    small=$(window).outerWidth() < breakpoint
+    $('.small-sidebar').css('display','none') 
 
 
     setInterval(function(){
@@ -18,57 +27,43 @@ $(document).ready(function(){
         if (play>3){play=0}
     },2000)
 
-    $(window).resize(function(){
-        //console.log('resixed')
-        if(small=$(window).outerWidth() < breakpoint){
-            //console.log('small')
-            $('.sidebar').addClass('small')
-            $('.small').slideUp(0) 
-        }
-        else{
-            //console.log('big')
-            $('.sidebar').removeClass('small')
-            $('.sidebar').slideDown(0)
-            
-        }
-    })
-
-    if(small=$(window).outerWidth() < breakpoint){
-        $('.sidebar').addClass('small')
-        $('.small').slideUp(0) 
-    }
     
     $('.menu-icon').click(function(){
         $(this).toggleClass('fa-bars fa-times')
-        $('.small').slideToggle()
-        console.log('menubar')
+        $('.small-sidebar').slideToggle()
+        //console.log('menubar')
     })
     
-    $('.small').click(function(){
+    $('.small-sidebar').click(function(){
         $('.menu-icon').removeClass('fa-times').addClass('fa-bars')
-        $('.small').slideUp() 
+        $('.small-sidebar').slideUp() 
     })
 
 
     //windowscroll
 
     $(window).scroll(function(){
+        $('.sidebars').height($(window).height())
+
         if($(window).scrollTop()<$('.welcomePage').outerHeight()){
-            $('.menu-bar').css('display','none')
+            //$('.menu-bar').css('display','none')//delete
             $('.sidebar-cont').css('opacity','0')
         }else{
-            $('.menu-bar').css('display','initial')
-            cloned=$('.welcomePage').children('.logoo,ul')
             $('.sidebar-cont').css({'opacity':'1'})
-            if( $('.sidebar').children().length<2){
-                $('.sidebar').append(cloned.clone())
-                $('.sidebar>ul').prepend("<li><a href='#welcomePage'>HOME</a></li>")
+            cloned=$('.welcomePage').children('.logoo,ul')
+            cloned2=$('.side-contact')
+            
+            if( $('.sidebars').children().length<2){
+                $('.sidebars').append(cloned.clone())
+                $('.sidebars>ul').prepend("<a href='#welcomePage'><li>HOME</li></a>")
+                $('.small-sidebar').append(cloned2.clone())
             }
         
         }
-        scrollanime('.proj:eq(0)')
-        scrollanime('.proj:eq(1)')
-        scrollanime('.proj:eq(2)')
+        scrollanime('.proj:eq(0)','projsudoclassafter')
+        scrollanime('.proj:eq(1)','projsudoclassafter')
+        scrollanime('.proj:eq(2)','projsudoclassafter')
+        scrollanime('#img>div','imgsudoclass')
     })
 
 
@@ -80,15 +75,6 @@ $(document).ready(function(){
         $(this).siblings('.see-moreOrHide').fadeIn()
     })
 
-    $('.sidebar').height($(window).height())
+    //needs correction 2 problems //-1
+    $('.sidebars').height($(window).height())
 })
-
-function scrollanime(ele){
-    
-    if($(window).scrollTop()>($(ele).offset().top - $(window).innerHeight()+$(ele).outerHeight()/2 )){
-        $(ele).addClass('projsudoclassafter')
-        //$(ele).css({opacity: 1, transform: 'translate(50px)'})
-
-        console.log('proj')
-    }
-}

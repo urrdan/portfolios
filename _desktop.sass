@@ -1,7 +1,24 @@
+
 html,body
 
+.welcome-cont-big
+    overflow: hidden
+    height: 65%
+.welcome-cont
+    width: 120%
+    background: gray
+    margin: 0 -10% 0 -10%
+    padding: 0 10% 
+    height: 100% //65%
+    border-top-left-radius: 0px
+    border-top-right-radius: 0px
+    border-bottom: 
+        left-radius: 50%  150px
+        right-radius: 50% 150px
+    overflow: hidden
+    text-align: center
 .welcomePage
-    height: 65%  
+    height: 100%// 65% 
     #name    
         
     .play
@@ -18,13 +35,13 @@ html,body
             a
 .sidebar-cont
     //background: #000
-.smll-scrn-menu
+.smll-scrn-menu, .small-sidebar
     display: none
 .sidebar
     display: grid
     grid-template-rows: 1fr 3fr 0.5fr 
     width: 250px
-    background: radial-gradient( $color1 30%,  $color3)//$background //rgba(247, 71, 61,0.2)
+    background: radial-gradient( $color3 0%,  $color1)//$background //rgba(247, 71, 61,0.2)
     position: sticky 
     top: 0
     color: white
@@ -70,34 +87,61 @@ html,body
     overflow: hidden
 .heading
     font-size: 1.5em
-    margin: 5vh 0
-    border-bottom: black 1px solid
-    margin-bottom: 9vh
-    border-bottom: black 1px solid
-    padding: 3vh 2vw
-    text-transform: uppercase
+    margin: 30px
+    //margin-bottom: 9vh
+    //padding: 3vh 2vw
     text-align: left
 
 #about
     
     >:not(:first-child)
         //margin: 10px
-    
     h2
-        //font-size: 3vw
+        display: none
+    h3
+        margin: 50px 0 30px
+        text-align: center
+        display: block
+        font-family: 'Muli'
+        font-size: 32px
+        font-weight: 700px
+
 
     #img
-        background: darkgray 
-        border-radius: 0%
+        margin-top: 150px
+        background: none
+        border: none
         width: 100%
-        height: 300px
+        height: 500px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        >div
+            width: 40%
+            height: 100%
+            border: gray solid 10px
+            border-radius: 10px
+            background: url('yaraa.jpg') no-repeat bottom
+            background-size: 100%
+            transform: rotateY(90deg)
+            //backface-visibility:  hidden
+            opacity: 0
+            &:nth-of-type(even)
+                transform: rotatex(90deg)
+        .imgsudoclass
+            opacity: 1
+            transform: rotateY(0deg)
+            transition: 1s ease-out
+            &:nth-of-type(even)
+                transform: rotatex(0deg)
          
     p
-        font-size: 25px
-        text-align: center
-        padding: 10px
+        font-size: 20px
+        //text-align: left
+        line-height: 2em
+        padding: 0 170px
         grid-row: 2/3
-        font-family: nth($fonts,2) 
+        //font-family: Muli//nth($fonts,2) 
         //float: left
         //display: inline-block
 
@@ -125,7 +169,8 @@ html,body
                     width: 80px
 #portfolio
     .proj
-        margin: 100px 0
+        //margin: 100px 0
+        padding: 60px 15px
         &:nth-of-type(even)
             .proj-info
                 grid-row: 1/2

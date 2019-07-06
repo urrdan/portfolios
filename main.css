@@ -30,7 +30,10 @@ li {
 
 a {
   text-decoration: none;
-  color: white; }
+  color: inherit; }
+
+button {
+  cursor: pointer; }
 
 .show-menu {
   display: initial;
@@ -141,16 +144,15 @@ a {
 
 .heading {
   font-family: "Montserrat";
-  margin: 50px 15px;
+  margin: 50px 15px 10px;
   border-bottom: black 1px solid;
   text-transform: uppercase;
-  font-size: 6vw;
   padding: 5px; }
 
 #about {
   display: grid;
   grid-template: auto auto auto;
-  padding: 5%;
+  padding: 10px;
   font-weight: 600;
   font-family: "Montserrat"; }
   #about #img {
@@ -166,20 +168,21 @@ a {
     color: rgba(0, 0, 0, 0.75);
     font-size: 18px;
     text-align: center;
-    font-family: "Indie Flower";
-    font-weight: 600; }
+    font-family: "Indie Flower"; }
   #about .see-moreOrHide {
     text-align: center;
     color: blue;
     font-family: "Montserrat";
     font-size: 15px; }
+  #about h3 {
+    display: none; }
 
 #portfolio {
   overflow: hidden; }
 
 .proj {
-  background: #e6e6e6;
-  margin: 50px 0;
+  background: linear-gradient(to top, #b4b4b4, #e6e6e6 30%);
+  margin: 0px 0;
   display: grid;
   grid-template-columns: auto auto;
   padding: 30px 15px;
@@ -199,7 +202,8 @@ a {
       margin-bottom: 20px;
       font-size: 25px; }
     .proj .proj-info p {
-      color: #1e1e1e; }
+      color: #1e1e1e;
+      line-height: 1.7em; }
     .proj .proj-info ul {
       padding: 0;
       margin: 30px 0; }
@@ -218,7 +222,8 @@ a {
         color: #F7473D;
         outline: none;
         border-radius: 5px;
-        font-family: "Montserrat"; }
+        font-family: "Montserrat";
+        padding: 3px 8px; }
         .proj .proj-info > section button:hover {
           color: white;
           background: #F7473D;
@@ -324,21 +329,36 @@ footer {
     transform: translateX(0px); } }
 
 @media screen and (min-width: 760px) {
-  .welcomePage {
+  .welcome-cont-big {
+    overflow: hidden;
     height: 65%; }
+  .welcome-cont {
+    width: 120%;
+    background: gray;
+    margin: 0 -10% 0 -10%;
+    padding: 0 10%;
+    height: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 50%  150px;
+    border-bottom-right-radius: 50% 150px;
+    overflow: hidden;
+    text-align: center; }
+  .welcomePage {
+    height: 100%; }
     .welcomePage ul {
       align-self: end; }
       .welcomePage ul li {
         width: 140px;
         padding: 5px;
         margin: 10px; }
-  .smll-scrn-menu {
+  .smll-scrn-menu, .small-sidebar {
     display: none; }
   .sidebar {
     display: grid;
     grid-template-rows: 1fr 3fr 0.5fr;
     width: 250px;
-    background: radial-gradient(#F7473D 30%, #F7833D);
+    background: radial-gradient(#F7833D 0%, #F7473D);
     position: sticky;
     top: 0;
     color: white; }
@@ -378,24 +398,48 @@ footer {
     overflow: hidden; }
   .heading {
     font-size: 1.5em;
-    margin: 5vh 0;
-    border-bottom: black 1px solid;
-    margin-bottom: 9vh;
-    border-bottom: black 1px solid;
-    padding: 3vh 2vw;
-    text-transform: uppercase;
+    margin: 30px;
     text-align: left; }
-  #about #img {
-    background: darkgray;
-    border-radius: 0%;
-    width: 100%;
-    height: 300px; }
-  #about p {
-    font-size: 25px;
+  #about h2 {
+    display: none; }
+  #about h3 {
+    margin: 50px 0 30px;
     text-align: center;
-    padding: 10px;
-    grid-row: 2/3;
-    font-family: "Rajdhani"; }
+    display: block;
+    font-family: 'Muli';
+    font-size: 32px;
+    font-weight: 700px; }
+  #about #img {
+    margin-top: 150px;
+    background: none;
+    border: none;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    #about #img > div {
+      width: 40%;
+      height: 100%;
+      border: gray solid 10px;
+      border-radius: 10px;
+      background: url("yaraa.jpg") no-repeat bottom;
+      background-size: 100%;
+      transform: rotateY(90deg);
+      opacity: 0; }
+      #about #img > div:nth-of-type(even) {
+        transform: rotatex(90deg); }
+    #about #img .imgsudoclass {
+      opacity: 1;
+      transform: rotateY(0deg);
+      transition: 1s ease-out; }
+      #about #img .imgsudoclass:nth-of-type(even) {
+        transform: rotatex(0deg); }
+  #about p {
+    font-size: 20px;
+    line-height: 2em;
+    padding: 0 170px;
+    grid-row: 2/3; }
   #knows {
     padding: 0;
     margin: auto; }
@@ -415,7 +459,7 @@ footer {
           #knows .knowses > div i img {
             width: 80px; }
   #portfolio .proj {
-    margin: 100px 0; }
+    padding: 60px 15px; }
     #portfolio .proj:nth-of-type(even) .proj-info {
       grid-row: 1/2;
       text-align: left; }
@@ -432,21 +476,28 @@ footer {
       display: inline-block; } }
 
 @media screen and (max-width: 760px) {
+  .welcome-cont-big, .welcome-cont {
+    width: 100%;
+    height: 100%; }
   .smll-scrn-menu {
     background: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px; }
+  .small {
+    display: none; }
   .sidebar {
+    display: none; }
+  .small-sidebar {
     background: rgba(0, 0, 0, 0.9);
     display: grid;
     grid-template-rows: 3fr 1fr;
     overflow: hidden;
     padding: 15px; }
-    .sidebar > .logoo {
+    .small-sidebar > .logoo {
       display: none; }
-    .sidebar > .side-contact {
+    .small-sidebar > .side-contact {
       border-top: white solid;
       grid-row: -2/-1;
       display: flex;
@@ -454,13 +505,13 @@ footer {
       justify-content: space-around;
       align-items: center;
       color: gray; }
-    .sidebar > ul {
+    .small-sidebar > ul {
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 0;
       text-align: right; }
-      .sidebar > ul li {
+      .small-sidebar > ul li {
         margin: 20px; }
   .proj {
     grid-template-columns: 1fr;
