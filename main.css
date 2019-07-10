@@ -78,7 +78,7 @@ button {
     width: 100px;
     height: 30px; }
   .logoo span:nth-of-type(2) {
-    color: #bebebe;
+    color: #d2d2d2;
     font-weight: 300;
     font-family: "Rajdhani";
     margin: 3px; }
@@ -135,13 +135,13 @@ button {
   .heading-cont .heading {
     font-family: "Montserrat";
     text-transform: uppercase;
-    padding: 0 5px;
+    padding: 0 10px;
     color: gray; }
 
 .heading-div {
   background: black;
   width: 100%;
-  height: 2px; }
+  height: 1px; }
 
 #about {
   display: grid;
@@ -268,7 +268,7 @@ button {
     text-align: center; }
     .techniques .technique i {
       color: #F7473D;
-      font-size: 4em; }
+      font-size: 4rem; }
     .techniques .technique p:first-of-type {
       font-weight: bold;
       font-size: 18px;
@@ -287,12 +287,18 @@ button {
     #comments .comment span, #comments .comment i {
       color: #F7473D; }
     #comments .comment p {
-      margin-bottom: 5%; }
+      margin: 25px 0; }
     #comments .comment span {
       display: block;
       text-align: right;
-      margin: 5% 5% 0;
       font-weight: bold; }
+  #comments .dimensions {
+    margin: auto;
+    text-align: center; }
+    #comments .dimensions span {
+      margin: 0 20px;
+      box-shadow: 0 0 10px gray;
+      padding: 10px; }
 
 #contacts .contact {
   background: #F7833D;
@@ -307,7 +313,7 @@ button {
 
 footer {
   background: #b4b4b4;
-  margin-top: 3vh;
+  margin-top: 40px;
   padding: 12px 0px;
   text-align: center; }
 
@@ -364,7 +370,7 @@ footer {
   .sidebar {
     display: grid;
     grid-template-rows: 1fr 3fr 0.5fr;
-    width: 250px;
+    width: 220px;
     background: radial-gradient(#F7833D 0%, #F7473D);
     position: sticky;
     top: 0;

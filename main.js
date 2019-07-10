@@ -81,4 +81,7 @@ $(document).ready(function(){
 
     //needs correction 2 problems //-1
     $('.sidebars').height($(window).height())
+
+    $('.dimensions>span:first').text('Width:  '+$(window).width())
+    $('.dimensions>span:last').text('Height:  '+$(window).height())
 })
