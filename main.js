@@ -27,7 +27,11 @@ $(document).ready(function(){
         if (play>3){play=0}
     },2000)
 
-    
+    $('.heading-cont').append('<div><div>').prepend('<div>')
+    $('.heading-cont').children('div').addClass('heading-div')
+    //$('.heading').before('')
+
+
     $('.menu-icon').click(function(){
         $(this).toggleClass('fa-bars fa-times')
         $('.small-sidebar').slideToggle()
@@ -36,7 +40,7 @@ $(document).ready(function(){
     
     $('.small-sidebar').click(function(){
         $('.menu-icon').removeClass('fa-times').addClass('fa-bars')
-        $('.small-sidebar').slideUp() 
+        $('.small-sidebar').slideUp()
     })
 
 
@@ -71,7 +75,7 @@ $(document).ready(function(){
     
     $('.see-moreOrHide').click(function(){
         $('.text-hid').slideToggle()
-        $(this).fadeOut()
+        $(this).fadeOut(0)
         $(this).siblings('.see-moreOrHide').fadeIn()
     })
 

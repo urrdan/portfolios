@@ -35,22 +35,6 @@ a {
 button {
   cursor: pointer; }
 
-.show-menu {
-  display: initial;
-  background: rgba(0, 0, 0, 0.7);
-  text-align: left;
-  font-family: "Montserrat"; }
-  .show-menu ul {
-    padding: 0px; }
-    .show-menu ul li {
-      list-style: none;
-      margin: 50px 60px 30px 30px;
-      border-bottom: 2px #F7473D solid;
-      padding: 10px; }
-      .show-menu ul li a {
-        text-decoration: none;
-        color: white; }
-
 .welcomePage {
   margin: 0px;
   width: 100%;
@@ -76,23 +60,24 @@ button {
       padding: 1.6vw 0;
       text-align: center;
       text-decoration: none;
+      border: solid transparent;
       border-radius: 50px;
       color: white;
       font-family: "Montserrat";
       font-size: 1em;
       background: linear-gradient(to left, #F7833D 0%, #F7473D);
       animation: movefrombottom 1s .5s backwards; }
-      .welcomePage > ul li a {
-        text-decoration: none;
-        color: inherit;
-        margin: auto; }
 
 .logoo {
   grid-row: 1/2;
   text-align: left; }
   .logoo > * {
     display: block; }
-  .logoo span:nth-child(2) {
+  .logoo div {
+    background: #000;
+    width: 100px;
+    height: 30px; }
+  .logoo span:nth-of-type(2) {
     color: #bebebe;
     font-weight: 300;
     font-family: "Rajdhani";
@@ -142,12 +127,21 @@ button {
   transition: 0.5s;
   opacity: 0; }
 
-.heading {
-  font-family: "Montserrat";
-  margin: 50px 15px 10px;
-  border-bottom: black 1px solid;
-  text-transform: uppercase;
-  padding: 5px; }
+.heading-cont {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin: 80px 0px 50px; }
+  .heading-cont .heading {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    padding: 0 5px;
+    color: gray; }
+
+.heading-div {
+  background: black;
+  width: 100%;
+  height: 2px; }
 
 #about {
   display: grid;
@@ -169,11 +163,21 @@ button {
     font-size: 18px;
     text-align: center;
     font-family: "Indie Flower"; }
+    #about p button {
+      display: block;
+      margin: 50px auto;
+      padding: 0;
+      border: solid #F7473D;
+      border-radius: 5px;
+      background: none;
+      outline: none; }
   #about .see-moreOrHide {
     text-align: center;
-    color: blue;
+    color: #F7473D;
     font-family: "Montserrat";
-    font-size: 15px; }
+    font-size: 15px;
+    padding: 5px 10px;
+    cursor: pointer; }
   #about h3 {
     display: none; }
 
@@ -292,11 +296,10 @@ button {
 
 #contacts .contact {
   background: #F7833D;
-  width: 50%;
+  width: 180px;
   margin: auto;
   margin-bottom: 10px;
   text-align: center;
-  height: 40vw;
   padding: 5px; }
   #contacts .contact i {
     margin: 15px 0 30px;
@@ -328,7 +331,7 @@ footer {
     opacity: 1;
     transform: translateX(0px); } }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 600px) {
   .welcome-cont-big {
     overflow: hidden;
     height: 65%; }
@@ -352,6 +355,10 @@ footer {
         width: 140px;
         padding: 5px;
         margin: 10px; }
+        .welcomePage ul li:hover {
+          color: #F7473D;
+          background: none;
+          border: solid #F7473D; }
   .smll-scrn-menu, .small-sidebar {
     display: none; }
   .sidebar {
@@ -396,12 +403,8 @@ footer {
     width: 100%;
     margin: auto;
     overflow: hidden; }
-  .heading {
-    font-size: 1.5em;
-    margin: 30px;
-    text-align: left; }
-  #about h2 {
-    display: none; }
+  .heading-cont {
+    margin: 150px 0 50px; }
   #about h3 {
     margin: 50px 0 30px;
     text-align: center;
@@ -410,25 +413,21 @@ footer {
     font-size: 32px;
     font-weight: 700px; }
   #about #img {
-    margin-top: 150px;
     background: none;
     border: none;
-    width: 100%;
-    height: 500px;
+    width: 0;
+    height: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around; }
-    #about #img > div {
-      width: 40%;
-      height: 100%;
-      border: gray solid 10px;
-      border-radius: 10px;
-      background: url("yaraa.jpg") no-repeat bottom;
-      background-size: 100%;
-      transform: rotateY(90deg);
-      opacity: 0; }
-      #about #img > div:nth-of-type(even) {
-        transform: rotatex(90deg); }
+    justify-content: space-around;
+    /* >div
+            width: 40%
+            height: 100%
+            border: gray solid 10px
+            border-radius: 10px
+            background: url('yaraa.jpg') no-repeat bottom
+            background-size: 100%
+            transform: rotateY(90deg) */ }
     #about #img .imgsudoclass {
       opacity: 1;
       transform: rotateY(0deg);
@@ -475,7 +474,7 @@ footer {
       height: 140px;
       display: inline-block; } }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 600px) {
   .welcome-cont-big, .welcome-cont {
     width: 100%;
     height: 100%; }

@@ -31,6 +31,9 @@ html,body
             padding: 5px
             margin: 10px
             &:hover
+                color: $color1
+                background: none
+                border: solid $color1
                 
             a
 .sidebar-cont
@@ -85,19 +88,14 @@ html,body
     //padding: 3px 
     //box-shadow: gray 0px 0px 5px
     overflow: hidden
-.heading
-    font-size: 1.5em
-    margin: 30px
-    //margin-bottom: 9vh
-    //padding: 3vh 2vw
-    text-align: left
+
+.heading-cont
+    margin: 150px 0 50px
 
 #about
     
-    >:not(:first-child)
-        //margin: 10px
     h2
-        display: none
+        //display: none
     h3
         margin: 50px 0 30px
         text-align: center
@@ -108,15 +106,15 @@ html,body
 
 
     #img
-        margin-top: 150px
+        //margin-top: 150px
         background: none
         border: none
-        width: 100%
-        height: 500px
+        width: 0//100%
+        height: 0//500px
         display: flex
         flex-direction: row
         justify-content: space-around
-        >div
+        /* >div
             width: 40%
             height: 100%
             border: gray solid 10px
@@ -127,13 +125,13 @@ html,body
             //backface-visibility:  hidden
             opacity: 0
             &:nth-of-type(even)
-                transform: rotatex(90deg)
+                transform: rotatex(90deg) */
         .imgsudoclass
             opacity: 1
             transform: rotateY(0deg)
             transition: 1s ease-out
             &:nth-of-type(even)
-                transform: rotatex(0deg)
+                transform: rotatex(0deg) 
          
     p
         font-size: 20px
