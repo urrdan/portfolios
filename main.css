@@ -1,3 +1,7 @@
+@statin {
+  color-interpolation-filters: 5px;
+  interprete: long-variables; }
+
 .projsudoclassbefore {
   opacity: 0;
   transition: 0; }
@@ -162,7 +166,8 @@ button {
     color: rgba(0, 0, 0, 0.75);
     font-size: 18px;
     text-align: center;
-    font-family: "Indie Flower"; }
+    font-family: "Indie Flower";
+    line-height: 30px; }
     #about p button {
       display: block;
       margin: 50px auto;
@@ -189,16 +194,25 @@ button {
   margin: 0px 0;
   display: grid;
   grid-template-columns: auto auto;
+  grid-gap: 50px;
   padding: 30px 15px;
   transition: 0.7s ease-out; }
-  .proj img {
+  .proj .proj-img {
     padding: 10px;
     transition: 0.5s;
     background: lightgray;
     border: none;
-    box-shadow: 0 0 10px black; }
-    .proj img:hover {
+    box-shadow: 0 0 10px black;
+    position: relative; }
+    .proj .proj-img:hover {
       padding: 0; }
+    .proj .proj-img img:last-of-type {
+      position: absolute;
+      height: 70%;
+      bottom: 0;
+      left: 0;
+      transform: translate(-50%);
+      box-shadow: 0 0 10px gray; }
   .proj .proj-info {
     padding: 20px;
     text-align: right; }
@@ -233,10 +247,13 @@ button {
           background: #F7473D;
           border: solid #F7473D 0.8px; }
 
+.proj:nth-of-type(odd) .proj-img > img:last-of-type {
+  left: 100%; }
+
 #knows {
   background: linear-gradient(to left, #F7833D 0%, #F7473D);
   font-family: "Rajdhani";
-  margin: 10px 0;
+  margin: 10px;
   width: 100%;
   padding: 5% 5% 10%;
   text-align: center; }
@@ -259,13 +276,14 @@ button {
 
 .techniques {
   margin: 30px 0px;
-  padding: 40px 20px;
+  padding: 40px 0px;
   background: #f0f0f0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between; }
   .techniques .technique {
-    text-align: center; }
+    text-align: center;
+    padding: 10px; }
     .techniques .technique i {
       color: #F7473D;
       font-size: 4rem; }
@@ -366,17 +384,20 @@ footer {
           background: none;
           border: solid #F7473D; }
   .smll-scrn-menu, .small-sidebar {
-    display: none; }
+    display: none;
+    height: 0px; }
   .sidebar {
     display: grid;
-    grid-template-rows: 1fr 3fr 0.5fr;
+    grid-template-rows: 1fr 3fr 1fr;
     width: 220px;
-    background: radial-gradient(#F7833D 0%, #F7473D);
     position: sticky;
     top: 0;
-    color: white; }
+    color: black;
+    box-shadow: 0 -5px 5px gray inset; }
     .sidebar span:last-of-type {
-      color: black; }
+      color: #646464; }
+    .sidebar .logoo {
+      align-self: end; }
     .sidebar > ul {
       grid-row: 2/3;
       text-align: right;
@@ -386,20 +407,23 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 100px 10px; }
+      align-self: center; }
       .sidebar > ul li {
         padding: 5px;
-        border: transparent solid; }
+        margin: 10px 0;
+        border: transparent solid;
+        color: #F7473D; }
         .sidebar > ul li:hover {
           background: gray;
-          border-top: black solid;
-          border-bottom: black solid; }
+          color: white;
+          border-top: #F7473D solid;
+          border-bottom: #F7473D solid; }
     .sidebar .side-contact {
       border-top: solid black;
-      padding-top: 15px;
       text-align: center;
-      color: black;
-      font-size: 20px; }
+      color: #8c8c8c;
+      font-size: 20px;
+      align-self: center; }
       .sidebar .side-contact i {
         margin: 10px; }
   .wrapper {
@@ -411,22 +435,18 @@ footer {
     overflow: hidden; }
   .heading-cont {
     margin: 150px 0 50px; }
-  #about h3 {
-    margin: 50px 0 30px;
-    text-align: center;
-    display: block;
-    font-family: 'Muli';
-    font-size: 32px;
-    font-weight: 700px; }
-  #about #img {
-    background: none;
-    border: none;
-    width: 0;
-    height: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    /* >div
+  #about {
+    width: 70%;
+    margin: auto; }
+    #about #img {
+      background: none;
+      border: none;
+      width: 0;
+      height: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      /* >div
             width: 40%
             height: 100%
             border: gray solid 10px
@@ -434,17 +454,16 @@ footer {
             background: url('yaraa.jpg') no-repeat bottom
             background-size: 100%
             transform: rotateY(90deg) */ }
-    #about #img .imgsudoclass {
-      opacity: 1;
-      transform: rotateY(0deg);
-      transition: 1s ease-out; }
-      #about #img .imgsudoclass:nth-of-type(even) {
-        transform: rotatex(0deg); }
-  #about p {
-    font-size: 20px;
-    line-height: 2em;
-    padding: 0 170px;
-    grid-row: 2/3; }
+      #about #img .imgsudoclass {
+        opacity: 1;
+        transform: rotateY(0deg);
+        transition: 1s ease-out; }
+        #about #img .imgsudoclass:nth-of-type(even) {
+          transform: rotatex(0deg); }
+    #about p {
+      font-size: 20px;
+      line-height: 40px;
+      grid-row: 2/3; }
   #knows {
     padding: 0;
     margin: auto; }
@@ -468,8 +487,10 @@ footer {
     #portfolio .proj:nth-of-type(even) .proj-info {
       grid-row: 1/2;
       text-align: left; }
-  #portfolio img {
+  #portfolio .proj-img {
     height: 250px; }
+    #portfolio .proj-img img:first-of-type {
+      height: 100%; }
   #comments .comment {
     width: 70%;
     padding: 10px 10%; }
@@ -498,8 +519,7 @@ footer {
     background: rgba(0, 0, 0, 0.9);
     display: grid;
     grid-template-rows: 3fr 1fr;
-    overflow: hidden;
-    padding: 15px; }
+    overflow: hidden; }
     .small-sidebar > .logoo {
       display: none; }
     .small-sidebar > .side-contact {
@@ -521,11 +541,16 @@ footer {
   .proj {
     grid-template-columns: 1fr;
     transition: opacity 1s; }
-    .proj img {
-      width: 100%;
+    .proj .proj-img {
+      width: 80%;
       padding: 0;
       border: none;
       box-shadow: 0 0 10px black; }
+      .proj .proj-img img:first-of-type {
+        width: 100%; }
+      .proj .proj-img img:last-of-type {
+        left: 100%;
+        transform: translate(50%); }
   .techniques {
     grid-template-columns: 1fr;
     grid-gap: 50px; } }

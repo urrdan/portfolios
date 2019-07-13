@@ -19,6 +19,7 @@ $(document).ready(function(){
     $('.see-moreOrHide:last').fadeOut(0)
     $('.proj').addClass('projsudoclassbefore')
     $('.small-sidebar').css('display','none') 
+    $('.dimensions').fadeOut(0)
 
 
     setInterval(function(){
@@ -42,12 +43,14 @@ $(document).ready(function(){
         $('.menu-icon').removeClass('fa-times').addClass('fa-bars')
         $('.small-sidebar').slideUp()
     })
-
+    $('.comment:last >i').click(function(){
+        $('.dimensions').fadeToggle()
+    })
 
     //windowscroll
 
     $(window).scroll(function(){
-        $('.sidebars').height($(window).height())
+        $('.sidebars').height($(window).height() - $('.smll-scrn-menu').height())
 
         if($(window).scrollTop()<$('.welcomePage').outerHeight()){
             //$('.menu-bar').css('display','none')//delete
@@ -80,7 +83,7 @@ $(document).ready(function(){
     })
 
     //needs correction 2 problems //-1
-    $('.sidebars').height($(window).height())
+    $('.sidebars').height($(window).height() - $('.smll-scrn-menu').height())
 
     $('.dimensions>span:first').text('Width:  '+$(window).width())
     $('.dimensions>span:last').text('Height:  '+$(window).height())
