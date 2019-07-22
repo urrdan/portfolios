@@ -85,7 +85,8 @@ button {
     color: #d2d2d2;
     font-weight: 300;
     font-family: "Rajdhani";
-    margin: 3px; }
+    margin: 3px;
+    font-weight: bold; }
 
 .logo {
   font-size: 35px;
@@ -206,13 +207,17 @@ button {
     position: relative; }
     .proj .proj-img:hover {
       padding: 0; }
-    .proj .proj-img img:last-of-type {
+    .proj .proj-img .img-mbl {
       position: absolute;
       height: 70%;
       bottom: 0;
       left: 0;
       transform: translate(-50%);
-      box-shadow: 0 0 10px gray; }
+      border-left: solid black 2px;
+      border-right: solid black 2px;
+      border-top: solid black 8px;
+      border-bottom: solid black 8px;
+      border-radius: 5px; }
   .proj .proj-info {
     padding: 20px;
     text-align: right; }
@@ -247,14 +252,13 @@ button {
           background: #F7473D;
           border: solid #F7473D 0.8px; }
 
-.proj:nth-of-type(odd) .proj-img > img:last-of-type {
+.proj:nth-of-type(odd) .proj-img .img-mbl {
   left: 100%; }
 
 #knows {
   background: linear-gradient(to left, #F7833D 0%, #F7473D);
   font-family: "Rajdhani";
   margin: 10px;
-  width: 100%;
   padding: 5% 5% 10%;
   text-align: center; }
   #knows h3 {
@@ -358,7 +362,7 @@ footer {
 @media screen and (min-width: 600px) {
   .welcome-cont-big {
     overflow: hidden;
-    height: 65%; }
+    height: 75%; }
   .welcome-cont {
     width: 120%;
     background: gray;
@@ -395,7 +399,8 @@ footer {
     color: black;
     box-shadow: 0 -5px 5px gray inset; }
     .sidebar span:last-of-type {
-      color: #646464; }
+      color: #646464;
+      font-weight: normal; }
     .sidebar .logoo {
       align-self: end; }
     .sidebar > ul {
@@ -548,7 +553,7 @@ footer {
       box-shadow: 0 0 10px black; }
       .proj .proj-img img:first-of-type {
         width: 100%; }
-      .proj .proj-img img:last-of-type {
+      .proj .proj-img .img-mbl {
         left: 100%;
         transform: translate(50%); }
   .techniques {
