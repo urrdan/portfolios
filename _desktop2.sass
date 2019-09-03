@@ -1,0 +1,60 @@
+.sidebar-cont 
+    //background: #000
+    .smll-scrn-menu, .small-sidebar
+        display: none
+        height: 0px
+    .sidebar
+        display: grid
+        grid-template-rows: 1fr 3fr 1fr
+        width: 220px //250px
+        //background: radial-gradient( $color3 0%,  $color1)//$background //rgba(247, 71, 61,0.2)
+        position: sticky
+        top: 0
+        //color: white
+        color: black//for white bg
+        box-shadow: 0 -5px 5px gray inset//for white bg
+        span:last-of-type
+            color: rgb(100,100,100)
+            font-weight: normal
+        .logoo
+            align-self: end
+
+        >ul
+            grid-row: 2/3
+            text-align: right
+            padding-left: 20px
+            font-family: nth( $fonts, 3)
+            text-transform: uppercase
+            display: flex 
+            flex-direction: column
+            justify-content: space-between
+            align-self: center
+            //padding: 100px 10px
+            li
+                padding: 5px
+                margin: 10px 0
+                border: transparent solid
+                color: $color1 //for white bg
+                //border-right: 4px solid gray  //for the current
+                &:hover
+                    background: gray
+                    color: white//for white bg
+                    border: 
+                        top: $color1 solid
+                        bottom: $color1 solid
+        .side-contact
+            border-top: solid black
+            //padding-top: 15px
+            text-align: center
+            color: rgb(140,140,140)
+            font-size: 20px
+            align-self: center
+            i
+                margin: 10px
+
+.wrapper        
+    grid-template-columns: auto 1fr
+
+.techniques
+    .technique
+        width: 100%

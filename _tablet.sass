@@ -1,0 +1,146 @@
+html,body
+
+.welcome-cont-big
+    overflow: hidden
+    height: 75%
+.welcome-cont
+    width: 120%
+    background: gray
+    margin: 0 -10% 0 -10%
+    padding: 0 10% 
+    height: 100% //65%
+    border-top-left-radius: 0px
+    border-top-right-radius: 0px
+    border-bottom: 
+        left-radius: 50%  150px
+        right-radius: 50% 150px
+    overflow: hidden
+    text-align: center
+.welcomePage
+    height: 100%// 65% 
+    #name    
+        
+    .play
+        #play
+        
+    ul
+        align-self: end
+        li 
+            width: 140px
+            padding: 5px
+            margin: 10px
+            &:hover
+                color: $color1
+                background: none 
+                border: solid $color1
+                
+            a
+
+.wrapper
+    display: grid
+
+#sub-wrappa
+    width: 100%
+    margin: auto
+    overflow: hidden
+
+.heading-cont
+    margin: 150px 0 50px
+
+#about
+    width: 70%
+    margin: auto
+    .heading
+        
+    #img
+        background: none
+        border: none
+        width: 0//100%
+        height: 0//500px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        .imgsudoclass
+            opacity: 1
+            transform: rotateY(0deg)
+            transition: 1s ease-out
+            &:nth-of-type(even)
+                transform: rotatex(0deg) 
+         
+    p
+        font-size: 20px
+        //text-align: left
+        line-height: 40px
+        //padding: 0 170px
+        grid-row: 2/3
+        //font-family: Muli//nth($fonts,2) 
+        //float: left
+        //display: inline-block
+
+#knows
+    padding: 1px
+    margin: auto
+    h3
+    .knowses
+        color: black
+        display: flex
+        flex-direction: row
+        overflow: auto
+        &::-webkit-scrollbar
+            width: 0px
+            height: 2px
+        &::-webkit-scrollbar-thumb
+            background: #000
+        
+        .knows-tech
+            margin: 0px 40px
+        i
+            font-size: 90px
+            img
+                width: 80px
+.proj
+    //margin: 100px 0
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 50px
+    align-items: start
+    padding: 60px 15px
+    &:nth-of-type(odd)
+        .proj-img 
+            .img-mbl
+                left: 100% 
+    &:nth-of-type(even) 
+        .proj-info
+            grid-row: 1/2
+            text-align: left
+    .proj-img
+        //height: 250px 
+        img:first-of-type 
+            padding: 5px
+            width: 100% 
+        .img-mbl
+            position: absolute
+            transform: translate(-50%)
+
+
+.techniques
+    grid-template-columns: repeat(3,1fr)          
+    justify-content: space-between
+    .technique
+        width: 100%
+#comments
+    .comment
+        width: 70%
+        padding: 10px 10%
+        //clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%)
+        
+#contacts
+    .contacts-cont
+        grid-template-columns: 1fr 0.5fr
+        .send-message
+            margin: 20px 0
+            border: none
+            border-right: 1px black solid
+    .contact-wrapper
+        flex-direction: column 
+//
