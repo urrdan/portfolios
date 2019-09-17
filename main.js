@@ -77,6 +77,7 @@ $(document).ready(function(){
         scrollanime('.proj:eq(0)','projsudoclassafter')
         scrollanime('.proj:eq(1)','projsudoclassafter')
         scrollanime('.proj:eq(2)','projsudoclassafter')
+        scrollanime('.proj:eq(3)','projsudoclassafter')
         scrollanime('#img>div','imgsudoclass')
     })
 
