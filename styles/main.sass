@@ -1,6 +1,6 @@
 @import 'variables'
 
-
+//psudoclasses
 .projsudoclassbefore 
     opacity: 0
     transition: 0
@@ -11,13 +11,16 @@
 
 .projsudoclassafter
     opacity: 1
+
     &:nth-of-type(odd)
         transform: translate(0px)
+
     &:nth-of-type(even)
         transform: translate(0px)
 
-html,body
-    margin: 0px
+
+html,body 
+    margin: 0px 
     padding: 0px
     height: 100%
     width: 100%
@@ -27,20 +30,24 @@ html,body
 *
     margin: 0px
     box-sizing: border-box
+
 li
     list-style: none
 
 a
     text-decoration: none
     color: inherit
+
 button
     cursor: pointer
-    
 
-        
+
+.welcome-cont-big,.welcome-cont 
+    width: 100%
+    height: 100%
+
 
 .welcomePage
-    //position: static
     margin: 0px
     width: 100%
     height: 100%
@@ -48,8 +55,8 @@ button
     display: grid
     grid-template-rows: 1.5fr 1fr 1fr
     padding: 10px 0px 30px
-    background: url('background.jpg') 70% 50%
-    position: relative
+    background: url('images/background.jpg') 70% 50%
+    position: relative 
     >*
         z-index: 2
     //dont take it out of this parent or the animation will be borrowed to its new location.
@@ -74,12 +81,14 @@ button
             font-family: nth( $fonts, 1)
             font-size: 1em
             background: $background
-            animation: movefrombottom 1s .5s backwards           
+            animation: movefrombottom 1s .5s backwards   
+
 .logoo
     grid-row: 1/2
     text-align: left
     >* 
         display: block
+        padding-left: 10px
     div
         background: #000
         width: 100px
@@ -130,28 +139,52 @@ button
     left: 0px
     width: 100%
     height: 100%
-    //z-index: 
-
-
-.wrapper-cont
-    display: grid
-    //grid-template-columns: minmax(10px,1fr) minmax(auto ,1000px) minmax(10px,1fr)
-.wrapper
-    //grid-column: 2/3
 
 .sidebar-cont 
     position: sticky
     top: 0
-    //background: black
     color: white
     font-size: 20px
     z-index: 2
     transition: 0.5s
     opacity: 0
-#sub-wrappa 
-    //background: yellow
-    //padding: 3vh 5vw
- 
+    
+    .smll-scrn-menu
+        background: radial-gradient($color3, $color1) 
+        opacity: 0.9
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0px 20px
+    .small
+        display: none   //might be a problem
+    .sidebar
+        display: none
+    .small-sidebar
+        background: rgba(36,0,0,0.9)  
+        display: grid 
+        grid-template-rows: 3fr 1fr
+        overflow: hidden
+        //padding: 15px
+        >.logoo
+            display: none
+        >.side-contact
+            //padding: 10px
+            border-top: white solid
+            grid-row: -2/-1 
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            align-items: center
+            color: gray
+        >ul
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding: 0
+            text-align: right
+            li
+                margin: 20px 
 
 .heading-cont
     display: grid
@@ -163,6 +196,8 @@ button
         text-transform: uppercase
         padding: 0 10px 
         color: gray
+
+
 .heading-div
     background: black
     width: 100%
@@ -176,8 +211,8 @@ button
     font-weight: 600
     font-family: nth( $fonts, 1)
     #img
-        background: url('yaraa.jpg') no-repeat 10% 100% 
-        background-size: 70vw
+        background: url('images/yaraa.jpg') no-repeat 10% 100% 
+        background-size: 70vw 
         margin: auto
         width: 70vw
         height: 85vw
@@ -194,7 +229,7 @@ button
         //font-weight: 600
         //box-shadow: 0px 0px 10px rgb(200,200,200)
         button
-            display: block
+            display: block 
             margin: 50px auto
             padding: 0
             border: solid $color1
@@ -211,36 +246,56 @@ button
         cursor: pointer
     h3
         display: none
+
+
+//knows
+#knows
+    background: $background
+    font-family: nth( $fonts, 2)
+    margin: 10px 
+    //position: relative
+    padding: 20px
+    text-align: center
+    h3
+        margin: 5px 0px 40px
+    .knowses
+        color: white
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        .knows-tech
+            margin-bottom: 30px 
+        i
+            margin-bottom: 5px
+            font-size: 12vw
+            color: black
+            //color: $color1
+            img
+                //background: none
+                width: 12vw
+
+
+//project
 #portfolio
-    //background: lightgray
-    overflow: hidden
-    
-    
+    overflow: hidden 
 .proj
     background: linear-gradient(to top, rgb(180,180,180) ,rgb(230,230,230) 30%)
     margin: 0px 0
-    display: grid
-    grid-template-columns: auto auto
-    grid-gap: 50px
     padding: 30px 15px
     transition: 0.7s ease-out
     .proj-img
-        //height: 250px
-        //border: solid
-        padding: 10px
-        transition: 0.5s
-        background: lightgray
-        border: none
-        box-shadow: 0 0 10px black
+        width: 100%
+        padding: 0 
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-end
         position: relative
-        &:hover
-            padding: 0
+        margin-bottom: 50px
+        img:first-of-type
+            width: 85%
+            box-shadow: 0 0 10px black
         .img-mbl
-            position: absolute
-            height: 70%
-            bottom: 0
-            left: 0 
-            transform: translate(-50%)
+            width: 12% 
             border: 
                 left: solid black 2px
                 right: solid black 2px
@@ -249,8 +304,7 @@ button
             border-radius: 5px
             //box-shadow: 0 0 10px gray
 
-    .proj-info 
-        padding: 20px
+    .proj-info
         text-align: right 
         h3
             margin-bottom: 20px
@@ -285,49 +339,18 @@ button
                     color: white
                     background: $color1
                     border: solid $color1 0.8px
-.proj:nth-of-type(odd)
-    .proj-img 
-        .img-mbl
-            left: 100%
-            //transform: translate(50%)
-#knows
-    background: $background
-    font-family: nth( $fonts, 2)
-    margin: 10px 
-    //position: relative
-    padding: 5% 5% 10%
-    text-align: center
-    h3
-        margin-bottom: 7%
-        &:not(:first-child)
-            margin-top: 30%
-    .knowses
-        //width: 22%
-        //display: inline-block
-        
-        color: white
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
-        div
-            margin-bottom: 30px 
-        i
-            margin-bottom: 5px
-            font-size: 12vw
-            color: black
-            //color: $color1
-            img
-                //background: none
-                width: 12vw
-        
+
 
 .techniques
-    margin: 30px 0px
+    //margin: 30px 0px
     padding: 40px 0px
     background: rgb(240,240,240)
     display: grid
-    grid-template-columns: repeat(3,1fr)
-    justify-content: space-between
+    grid-template-columns: 1fr   
+
     .technique
+        width: 60%
+        margin: auto  
         text-align: center
         padding: 10px
         i
@@ -336,15 +359,17 @@ button
         p:first-of-type
             font-weight: bold
             font-size: 18px
-            margin: 30px 0px 10px
+            margin: 30px 0px 5px
+
 
 #comments
-    margin: 55px 0
+    margin: 55px 0 0
     font-family: nth( $fonts, 1)
     //background: linear-gradient(to left, #F7833D 0%,  #F7473D) 
+
     .comment
+        width: 90% 
         padding: 11px
-        width: 90%
         margin: auto
         //background: $background
         margin-bottom: 36px
@@ -359,35 +384,39 @@ button
             display: block
             text-align: right
             font-weight: bold
+
     .dimensions
         margin: auto
         text-align: center
 
         span
-            margin: 0 20px
+            margin: 0 10px
             box-shadow: 0 0 10px gray
             padding: 10px
-            
+
+
 #contacts
+    padding-top: 20px  
     .contacts-cont
         background: $color3
         display: grid
-        grid-template-columns: 1fr 0.5fr
+        grid-template-columns: 1fr 
 
     .send-message
         //background: $color3
         display: flex
         flex-direction: column
         align-items: center
-        padding: 20px
-        border-right: 1px black solid
+        justify-content: space-around
+        margin: 20px
+        border-bottom: 1px black solid
         >*
-            margin-bottom: 30px
+            margin: 15px
             border-radius: 5px
             outline: none
-            border: none
+            border: none 
         input
-            padding: 7px 10px
+            padding: 7px 10px 
             width: 90%
             //background: $color3
         textarea
@@ -399,115 +428,31 @@ button
             width: 150px
             padding: 8px 5px
     .contact-wrapper
+        //background: white
         display: flex
-        flex-direction: column
+        flex-direction: column 
+        align-items: center
         .contact 
-            //background: $color3
+            //background: rgb(240,240,240)
             margin-bottom: 10px
             text-align: center
             padding: 5px
 
-            i
-                color: gray
-                margin: 10px
-                font-size: 35px
-    
 
+            i
+                color: white
+                background: gray
+                margin: 10px
+                padding: 15px
+                border-radius: 50%
+                font-size: 35px
+                //cursor: pointer
+    
 footer
     background: rgb(180,180,180)
-    padding: 12px 0px
+    padding: 12px 0px 
     text-align: center
-
-
-
-
-@keyframes movefromtop
-    0%
-        opacity: 0
-        transform: translateY(-100px)
-    80%
-        transform: translateY(10px)
-    100%
-        opacity: 1
-        transform: translateY(0px)
-
-@keyframes movefrombottom
-    0%
-        opacity: 0
-        transform: translateX(10px)
-    80%
-        transform: translateX(-10px)
-    100%
-        opacity: 1
-        transform: translateX(0px)
-
-
-
-@media screen and (min-width: 600px) //760
-    @import 'desktop'
-
-
-@media screen and (max-width: 800px)
-    .wrapper
-        grid-template-columns: 1fr
-    .smll-scrn-menu
-        background: #000
-        display: flex
-        //flex-direction: row
-        justify-content: space-between
-        align-items: center
-        padding: 0px 20px
-    .small
-        display: none   //might be a problem
-    .sidebar
-        display: none
-    .small-sidebar
-        background: rgba(0,0,0,0.9)
-        display: grid
-        grid-template-rows: 3fr 1fr
-        overflow: hidden
-        //padding: 15px
-        >.logoo
-            display: none
-        >.side-contact
-            //padding: 10px
-            border-top: white solid
-            grid-row: -2/-1 
-            display: flex
-            flex-direction: row
-            justify-content: space-around
-            align-items: center
-            color: gray
-        >ul
-            display: flex
-            flex-direction: column
-            justify-content: center
-            padding: 0
-            text-align: right
-            li
-                margin: 20px
-@media screen and (max-width: 600px)   
-
-    .welcome-cont-big,.welcome-cont
-        width: 100%
-        height: 100%
-    .proj
-        grid-template-columns: 1fr
-        transition: opacity 1s
-
-        .proj-img
-            width: 80% 
-            padding: 0
-            border: none
-            box-shadow: 0 0 10px black
-            img:first-of-type
-                width: 100%
-            .img-mbl
-                left: 100%
-                transform: translate(50%)
-
-    .techniques
-        grid-template-columns: 1fr
-        grid-gap: 50px
-
-//@import 'main2'
+@media screen and (min-width:600px)
+    @import 'tablet'
+@media screen and (min-width:900px)
+    @import 'desktop' 
