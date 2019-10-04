@@ -4,18 +4,12 @@
 
 .projsudoclassbefore {
   opacity: 0;
-  transition: 0; }
-  .projsudoclassbefore:nth-of-type(odd) {
-    transform: translate(50px); }
-  .projsudoclassbefore:nth-of-type(even) {
-    transform: translate(-50px); }
+  transform: scale(0.5); }
 
 .projsudoclassafter {
-  opacity: 1; }
-  .projsudoclassafter:nth-of-type(odd) {
-    transform: translate(0px); }
-  .projsudoclassafter:nth-of-type(even) {
-    transform: translate(0px); }
+  transition: 0.5s ease-out;
+  opacity: 1;
+  transform: scale(1); }
 
 html, body {
   margin: 0px;
@@ -77,7 +71,6 @@ button {
       animation: movefrombottom 1s .5s backwards; }
 
 .logoo {
-  grid-row: 1/2;
   text-align: left; }
   .logoo > * {
     display: block;
@@ -190,15 +183,6 @@ button {
   padding: 10px;
   font-weight: 600;
   font-family: "Montserrat"; }
-  #about #img {
-    background: url("images/yaraa.jpg") no-repeat 10% 100%;
-    background-size: 70vw;
-    margin: auto;
-    width: 70vw;
-    height: 85vw;
-    border-radius: 50%;
-    border: #F7473D 1px solid;
-    margin-bottom: 50px; }
   #about p {
     color: rgba(0, 0, 0, 0.75);
     font-size: 18px;
@@ -222,6 +206,16 @@ button {
     cursor: pointer; }
   #about h3 {
     display: none; }
+
+#img {
+  background: url("images/yaraa.jpg") no-repeat 10% 100%;
+  background-size: cover;
+  margin: auto;
+  width: 200px;
+  height: 240px;
+  border: #F7473D 1px solid;
+  border-radius: 50%;
+  margin-bottom: 50px; }
 
 #knows {
   background: linear-gradient(to left, #F7833D 0%, #F7473D);
@@ -250,8 +244,7 @@ button {
 .proj {
   background: linear-gradient(to top, #b4b4b4, #e6e6e6 30%);
   margin: 0px 0;
-  padding: 30px 15px;
-  transition: 0.7s ease-out; }
+  padding: 30px 15px; }
   .proj .proj-img {
     width: 100%;
     padding: 0;
@@ -286,7 +279,8 @@ button {
         color: gray;
         display: inline-block;
         margin-left: 10px;
-        list-style: circle; }
+        list-style: circle;
+        text-decoration: underline; }
     .proj .proj-info > section {
       margin: 30px 0;
       justify-content: center; }
@@ -321,6 +315,8 @@ button {
       font-weight: bold;
       font-size: 18px;
       margin: 30px 0px 5px; }
+    .techniques .technique p:nth-of-type(2) {
+      color: #646464; }
 
 #comments {
   margin: 55px 0 0;
@@ -397,6 +393,12 @@ footer {
   padding: 12px 0px;
   text-align: center; }
 
+@keyframes flipper {
+  0% {
+    transform: rotateY(90deg); }
+  100% {
+    transform: rotateY(0deg); } }
+
 @media screen and (min-width: 600px) {
   .welcome-cont-big {
     overflow: hidden;
@@ -436,24 +438,9 @@ footer {
   #about {
     width: 70%;
     margin: auto; }
-    #about #img {
-      background: none;
-      border: none;
-      width: 0;
-      height: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around; }
-      #about #img .imgsudoclass {
-        opacity: 1;
-        transform: rotateY(0deg);
-        transition: 1s ease-out; }
-        #about #img .imgsudoclass:nth-of-type(even) {
-          transform: rotatex(0deg); }
     #about p {
       font-size: 20px;
-      line-height: 40px;
-      grid-row: 2/3; }
+      line-height: 40px; }
   #knows {
     padding: 1px;
     margin: auto; }
@@ -513,26 +500,28 @@ footer {
     height: 0px; }
   .sidebar-cont .sidebar {
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: repeat(4, auto);
     width: 220px;
     position: sticky;
     top: 0;
     color: black;
     box-shadow: 0 -5px 5px gray inset; }
+    .sidebar-cont .sidebar #img {
+      width: 100px;
+      height: 120px;
+      margin: auto; }
     .sidebar-cont .sidebar span:last-of-type {
       color: #646464;
       font-weight: normal; }
     .sidebar-cont .sidebar .logoo {
-      align-self: end; }
+      margin: auto; }
     .sidebar-cont .sidebar > ul {
-      grid-row: 2/3;
       text-align: right;
-      padding-left: 20px;
+      padding-right: 10px;
       font-family: "Dosis";
       text-transform: uppercase;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-self: center; }
       .sidebar-cont .sidebar > ul li {
         padding: 5px;
@@ -554,5 +543,7 @@ footer {
         margin: 10px; }
   .wrapper {
     grid-template-columns: auto 1fr; }
+  #about #img {
+    display: none; }
   .techniques .technique {
     width: 100%; } }

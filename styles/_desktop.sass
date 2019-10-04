@@ -4,28 +4,29 @@
         height: 0px
     .sidebar
         display: grid
-        grid-template-rows: 1fr 3fr 1fr
+        grid-template-rows: repeat(4,auto)
         width: 220px //250px
         position: sticky
         top: 0
-
         color: black//for white bg
         box-shadow: 0 -5px 5px gray inset//for white bg
+        #img
+            width: 100px
+            height: 120px
+            margin: auto
+
         span:last-of-type
             color: rgb(100,100,100)
             font-weight: normal
         .logoo
-            align-self: end
-
+            margin: auto
         >ul
-            grid-row: 2/3
             text-align: right
-            padding-left: 20px
+            padding-right: 10px 
             font-family: nth( $fonts, 3)
             text-transform: uppercase
             display: flex 
-            flex-direction: column
-            justify-content: space-between 
+            flex-direction: column 
             align-self: center
             li
                 padding: 5px
@@ -49,6 +50,10 @@
 
 .wrapper        
     grid-template-columns: auto 1fr
+
+#about
+    #img
+        display: none
 
 .techniques
     .technique

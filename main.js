@@ -15,7 +15,8 @@ $(document).ready(function(){
     //adding menu to small screens
     cloned=$('.welcomePage').children('.logoo,ul')
     cloned2=$('.side-contact')
-    $('.sidebars').append(cloned.clone())
+    $('.sidebars').prepend(cloned.clone())
+    $('.sidebar').prepend($('#img').clone())
     $('.sidebars>ul').prepend("<a href='#welcomePage'><li>HOME</li></a>")
     $('.small-sidebar').append(cloned2.clone())
 
@@ -55,7 +56,6 @@ $(document).ready(function(){
     })
 
     //windowscroll
-    $(window).scroll(function(){console.log($())})
 
     $(window).scroll(function(){
         $('.sidebars').height($(window).height() - $('.smll-scrn-menu').height())
@@ -71,7 +71,6 @@ $(document).ready(function(){
         scrollanime('.proj:eq(1)','projsudoclassafter')
         scrollanime('.proj:eq(2)','projsudoclassafter')
         scrollanime('.proj:eq(3)','projsudoclassafter')
-        scrollanime('#img>div','imgsudoclass')
     })
 
 

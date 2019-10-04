@@ -1,22 +1,16 @@
 @import 'variables'
 
 //psudoclasses
+
 .projsudoclassbefore 
     opacity: 0
-    transition: 0 
-    &:nth-of-type(odd)
-        transform: translate(50px)
-    &:nth-of-type(even)
-        transform: translate(-50px)
-
+    transform: scale(0.5) 
 .projsudoclassafter
+    transition: 0.5s ease-out
     opacity: 1
+    transform: scale(1) 
 
-    &:nth-of-type(odd)
-        transform: translate(0px)
 
-    &:nth-of-type(even)
-        transform: translate(0px)
 
 
 html,body 
@@ -84,7 +78,7 @@ button
             animation: movefrombottom 1s .5s backwards   
 
 .logoo
-    grid-row: 1/2
+    //grid-row: 1/2
     text-align: left
     >* 
         display: block
@@ -156,7 +150,7 @@ button
         justify-content: space-between
         align-items: center
         padding: 0px 20px
-    .small
+    .small 
         display: none   //might be a problem
     .sidebar
         display: none
@@ -206,20 +200,11 @@ button
 
 #about
     display: grid
-    grid-template: auto auto auto
+    grid-template: auto auto auto 
     padding: 10px
     font-weight: 600
     font-family: nth( $fonts, 1)
-    #img
-        background: url('images/yaraa.jpg') no-repeat 10% 100% 
-        background-size: 70vw 
-        margin: auto
-        width: 70vw
-        height: 85vw
-        border-radius: 50%
-        border: $color1 1px solid
-        //shape-outside: circle() 
-        margin-bottom: 50px
+    
     p
         color: rgba(0,0,0,0.75)
         font-size: 18px
@@ -246,7 +231,16 @@ button
         cursor: pointer
     h3
         display: none
-
+#img
+    background: url('images/yaraa.jpg') no-repeat 10% 100% 
+    background-size: cover // same as setting width to 250px(the width of parent)
+    margin: auto
+    width: 200px 
+    height: 240px 
+    border: $color1 1px solid
+    border-radius: 50%
+    //shape-outside: circle()  
+    margin-bottom: 50px
 
 //knows
 #knows
@@ -281,7 +275,8 @@ button
     background: linear-gradient(to top, rgb(180,180,180) ,rgb(230,230,230) 30%)
     margin: 0px 0
     padding: 30px 15px
-    transition: 0.7s ease-out
+    //0.7s
+    //backface-visibility: visible
     .proj-img
         width: 100%
         padding: 0 
@@ -320,6 +315,7 @@ button
                 display: inline-block
                 margin-left: 10px
                 list-style: circle
+                text-decoration: underline 
         >section
             margin: 30px 0
             //display: flex
@@ -360,6 +356,8 @@ button
             font-weight: bold
             font-size: 18px
             margin: 30px 0px 5px
+        p:nth-of-type(2)
+            color: rgb(100,100,100)
 
 
 #comments
@@ -452,6 +450,15 @@ footer
     background: rgb(180,180,180)
     padding: 12px 0px 
     text-align: center
+
+
+@keyframes flipper
+    0%
+        transform: rotateY(90deg)
+    100%
+        transform: rotateY(0deg)
+
+
 @media screen and (min-width:600px)
     @import 'tablet'
 @media screen and (min-width:900px)
