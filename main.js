@@ -4,13 +4,13 @@ $(document).ready(function(){
     lst=['creator','programmer','coder','designer']
     var play=0
 
-
     //initial setting
     $('.text-hid').slideUp(0)
     $('.see-moreOrHide:last').fadeOut(0)
     $('.proj').addClass('projsudoclassbefore')
     $('.small-sidebar').css('display','none') 
     $('.dimensions').fadeOut(0)
+    
 
     //adding menu to small screens
     cloned=$('.welcomePage').children('.logoo,ul')
@@ -67,6 +67,7 @@ $(document).ready(function(){
             $('.sidebar-cont').css({'opacity':'1'})
         
         }
+
         scrollanime('.proj:eq(0)','projsudoclassafter')
         scrollanime('.proj:eq(1)','projsudoclassafter')
         scrollanime('.proj:eq(2)','projsudoclassafter')
@@ -88,4 +89,15 @@ $(document).ready(function(){
     //dimension
     $('.dimensions>span:first').text('Width:  '+$(window).width())
     $('.dimensions>span:last').text('Height:  '+$(window).height())
+    
+
+    //solution for knows width breaking the page in IE and SAFARI-- need better solution.
+    a=$('#sub-wrappa').css('width')
+    $('#knows').css('width',a)
+    $(window).resize(()=>{
+        a='0'
+        $('#knows').css('width',a)
+        a=$('#sub-wrappa').css('width')
+        $('#knows').css('width',a)
+    })
 })
