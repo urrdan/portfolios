@@ -114,17 +114,50 @@ button {
   font-family: "Montserrat";
   font-weight: 700;
   text-transform: uppercase;
-  animation: movefromtop 2s 0.5s backwards;
   margin-bottom: 20px;
 }
 
-.play {
+.brand-title {
   text-align: center;
   height: 0.1px;
   font-family: "Dosis";
   overflow: visible;
   font-size: 21px;
   color: #F2F2F2;
+}
+.brand-title .brand-title-item {
+  animation: fader 8s infinite both;
+}
+.brand-title .brand-title-item:nth-child(2) {
+  animation-delay: 2s;
+}
+.brand-title .brand-title-item:nth-child(3) {
+  animation-delay: 4s;
+}
+.brand-title .brand-title-item:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes fader {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  6.25% {
+    opacity: 100%;
+    display: inline-block;
+  }
+  18.75% {
+    opacity: 100%;
+  }
+  25% {
+    opacity: 0%;
+    display: none;
+  }
+  100% {
+    opacity: 0%;
+    display: none;
+  }
 }
 .welcomePage::after {
   content: "";

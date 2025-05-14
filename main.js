@@ -1,9 +1,4 @@
 $(document).ready(function () {
-  //variables
-  lst = ["developer", "problem solver", "learner", "team player"];
-  //lst = ["creator", "programmer", "coder", "designer"];
-  var play = 0;
-
   //initial setting
   $(".text-hid").slideUp(0);
   $(".see-moreOrHide:last").fadeOut(0);
@@ -30,14 +25,6 @@ $(document).ready(function () {
       $(ele).addClass(classtoadd);
     }
   }
-
-  setInterval(function () {
-    play++;
-    if (play > 3) {
-      play = 0;
-    }
-    $("#play").html(lst[play]).fadeIn(500).delay(900).fadeOut(500);
-  }, 2000);
 
   //for the lines on either side of headings
   $(".heading-cont").append("<div><div>").prepend("<div>");

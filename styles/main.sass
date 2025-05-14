@@ -100,18 +100,18 @@ button
     
 #name
     color: white
-    //background: red
-
     text-align: center
     font-size: 30px
     font-family: nth( $fonts, 1)
     font-weight: 700
     text-transform: uppercase
-    animation: movefromtop 2s .5s backwards
     margin-bottom: 20px
     
     
-.play
+@mixin animationDelay($delay)
+    animation-delay: $delay
+
+.brand-title
     text-align: center
     height: 0.1px
     font-family: nth( $fonts, 3)
@@ -119,8 +119,35 @@ button
     font-size: 21px
     color: #F2F2F2
 
-    #play
-                
+    .brand-title-item
+        animation: fader 8s infinite both
+        &:nth-child(2)     
+            @include animationDelay(2s)
+        &:nth-child(3)     
+            @include animationDelay(4s)
+        &:nth-child(4)     
+            @include animationDelay(6s)
+        
+
+
+    
+
+@keyframes fader 
+    0%
+        opacity: 0
+        display: none
+    6.25%
+        opacity: 100%
+        display: inline-block
+    18.75%
+        opacity: 100%
+    25% 
+        opacity: 0%
+        display: none
+    100%
+        opacity: 0%
+        display: none
+             
                    
 
 .welcomePage::after
